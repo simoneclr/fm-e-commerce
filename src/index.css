@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+	/* Mobile Menu button */
+	/* When the menu is closed, hide the close icon */
+	.menu-button[data-menu-open="false"] > .icon-close {
+		@apply hidden;
+	}
+
+	/* When the menu is open, hide the open icon */
+	.menu-button[data-menu-open="true"] > .icon-hamburger {
+		@apply hidden;
+	}
+
+	nav[data-menu-open="false"] {
+		@apply hidden;
+		/* On large screens, the nav menu should be visible no matter what */
+		@apply lg:block;
+	}
+}
