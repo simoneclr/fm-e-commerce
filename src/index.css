@@ -15,9 +15,7 @@
 		@apply hidden;
 	}
 
-	nav[data-menu-open="false"] {
-		@apply hidden;
-		/* On large screens, the nav menu should be visible no matter what */
-		@apply lg:block;
+	nav[data-menu-open="true"] {
+		@apply translate-x-0;
 	}
 }

@@ -15,7 +15,7 @@ const NavListItem = ({children, to}) => {
 function Navbar() {
 
 	// State variable controlling the open/closed navigation menu on mobile
-	const [menuOpen, setMenuOpen] = useState(true)
+	const [menuOpen, setMenuOpen] = useState(false)
 
 	// Function that handles click on menu button
 	const onMenuButtonClicked = () => {
@@ -36,9 +36,13 @@ function Navbar() {
 				<img className="pb-1" src="images/logo.svg" alt="Sneakers Brand Logo"/>
 			</div>
 
-			<nav className="fixed inset-0 bg-black/75 lg:static lg:bg-transparent lg:block lg:grow" data-menu-open={menuOpen}>
+			<nav className="fixed inset-0 bg-black/75
+											-translate-x-full transition-transform duration-700
+											lg:static lg:bg-transparent lg:block lg:grow lg:translate-x-0 lg:transition-none"
+											data-menu-open={menuOpen}>
+
 				<ul className="bg-white h-full w-64 max-w-full pt-16 pl-[5%] flex flex-col items-start gap-8
-												lg:w-auto lg:p-0 lg:flex-row lg:items-center">
+												 lg:w-auto lg:p-0 lg:flex-row lg:items-center">
 					<NavListItem>Collections</NavListItem>
 					<NavListItem>Men</NavListItem>
 					<NavListItem>Women</NavListItem>
