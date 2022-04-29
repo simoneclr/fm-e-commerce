@@ -4,6 +4,10 @@
 
 @layer components {
 
+	body {
+		@apply font-kumbh;
+	}
+
 	/* Mobile Menu button */
 	/* When the menu is closed, hide the close icon */
 	.menu-button[data-menu-open="false"] > .icon-close {
