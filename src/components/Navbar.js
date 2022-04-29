@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // Displays a single item from the navigation list
 const NavListItem = ({children, to, onClick}) => {
