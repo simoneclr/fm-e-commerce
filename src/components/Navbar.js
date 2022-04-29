@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Displays a single item from the navigation list
-const NavListItem = ({children, to}) => {
+const NavListItem = ({children, to, onClick}) => {
 	return (
 		<li>
-			<a href={to ? to : "#"}>
+			<a href={to ? to : "#"} onClick={onClick}>
 				{children ? children : ""}
 			</a>
 		</li>
@@ -22,6 +22,10 @@ function Navbar() {
 		setMenuOpen(prevState => !prevState)
 	}
  
+	// Sets menuOpen to false to close the navigation menu
+	const closeNavMenu = () => {
+		setMenuOpen(false)
+	}
 
 	return (
 		<div className="h-16 px-[5%] lg:px-0 bg-white flex items-center gap-4 lg:gap-8">
@@ -43,11 +47,11 @@ function Navbar() {
 
 				<ul className="bg-white h-full w-64 max-w-full pt-16 pl-[5%] flex flex-col items-start gap-8
 												 lg:w-auto lg:p-0 lg:flex-row lg:items-center">
-					<NavListItem>Collections</NavListItem>
-					<NavListItem>Men</NavListItem>
-					<NavListItem>Women</NavListItem>
-					<NavListItem>About</NavListItem>
-					<NavListItem>Contact</NavListItem>
+					<NavListItem onClick={closeNavMenu}>Collections</NavListItem>
+					<NavListItem onClick={closeNavMenu}>Men</NavListItem>
+					<NavListItem onClick={closeNavMenu}>Women</NavListItem>
+					<NavListItem onClick={closeNavMenu}>About</NavListItem>
+					<NavListItem onClick={closeNavMenu}>Contact</NavListItem>
 				</ul>
 			</nav>
 
