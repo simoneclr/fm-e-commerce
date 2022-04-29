@@ -1,11 +1,15 @@
 import React from 'react';
+
 import Navbar from './components/Navbar';
+import ProductPage from './views/products/ProductPage';
 
 function App() {
   return (
-    <div className="App min-h-screen lg:px-[10%] bg-slate-100">
+    <div className="App min-h-screen flex flex-col items-stretch lg:px-[10%]">
       <Navbar/>
-      <h1 className="text-5xl">Hello World!</h1>
+      <main className="grow py-20">
+        <ProductPage/>
+      </main>
     </div>
   );
 }

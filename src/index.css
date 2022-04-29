@@ -22,4 +22,16 @@
 	nav[data-menu-open="true"] {
 		@apply translate-x-0;
 	}
+
+	/* Gallery Thumbnauil button */
+	/* Style thumnail button corresponding to the large image currently displayed */
+	.ThumbnailButton[data-image-selected="true"] {
+		@apply outline;
+		@apply outline-2;
+		@apply outline-primaryOrange;
+	}
+
+	.ThumbnailButton[data-image-selected="true"] > img {
+		@apply opacity-25;
+	}
 }
