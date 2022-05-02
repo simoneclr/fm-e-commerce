@@ -45,7 +45,7 @@ function Navbar() {
 				<img className="pb-1" src="images/logo.svg" alt="Sneakers Brand Logo"/>
 			</div>
 
-			<nav className="fixed inset-0 bg-black/75
+			<nav className="fixed inset-0 z-40 bg-black/75
 											-translate-x-full transition-transform duration-700
 											lg:static lg:bg-transparent lg:block lg:h-full lg:grow lg:translate-x-0 lg:transition-none"
 											data-menu-open={menuOpen}>
