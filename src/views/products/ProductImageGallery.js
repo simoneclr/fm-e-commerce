@@ -44,11 +44,11 @@ function ProductImageGallery() {
 
 	return (
 		<div className="grid grid-cols-4 lg:gap-4 xl:gap-8">
-			<div className="relative col-span-4 lg:rounded-2xl lg:overflow-hidden">
-				<button className="absolute left-[5%] top-1/2 -translate-y-1/2 bg-white px-3 
+			<div className="relative h-80 overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl">
+				<button className="gallery-button absolute left-[5%] top-1/2 -translate-y-1/2 bg-white px-3 
 														aspect-square rounded-full lg:hidden"
 								onClick={showPrevImage}>
-					<img src="images/icon-previous.svg" alt="Previous" className="m-auto"/>
+					<img src="images/icon-previous.svg" alt="Previous" className="pr-0.5 m-auto"/>
 				</button>
 
 				<img src={IMAGES[image]} alt="Shoes"/>
@@ -56,7 +56,7 @@ function ProductImageGallery() {
 				<button className="absolute right-[5%] top-1/2 -translate-y-1/2 bg-white px-3 
 														aspect-square rounded-full lg:hidden"
 								onClick={showNextImage}>
-					<img src="images/icon-next.svg" alt="Next" className="m-auto"/>
+					<img src="images/icon-next.svg" alt="Next" className="pl-0.5 m-auto"/>
 				</button>
 			</div>
 
