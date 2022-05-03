@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+
+import { selectProductById } from "../../store/products/productsSlice";
 
 // Given an image, displays a thumbnail button for the gallery
 const ThumbnailButton = ({url, isSelected, onClick}) => {
@@ -12,14 +15,10 @@ const ThumbnailButton = ({url, isSelected, onClick}) => {
 }
 
 // Displays a gallery of images for a given product
-function ProductImageGallery() {
+function ProductImageGallery({productId}) {
 
-	const IMAGES = [
-		"images/image-product-1.jpg",
-		"images/image-product-2.jpg",
-		"images/image-product-3.jpg",
-		"images/image-product-4.jpg"
-	]
+	// Select product information from store
+	const product = useSelector(state => selectProductById(state, productId))
 
 	// State variable controlling which image to show
 	const [image, setImage] = useState(0)
@@ -37,7 +36,7 @@ function ProductImageGallery() {
 	const showNextImage = () => {
 		const next = image + 1
 
-		if (next < IMAGES.length) {
+		if (next < product.images.length) {
 			setImage(next)
 		}
 	}
@@ -51,7 +50,7 @@ function ProductImageGallery() {
 					<img src="images/icon-previous.svg" alt="Previous" className="pr-0.5 m-auto"/>
 				</button>
 
-				<img src={IMAGES[image]} alt="Shoes"/>
+				<img src={product.images[image]} alt="Shoes"/>
 
 				<button className="absolute right-[5%] top-1/2 -translate-y-1/2 bg-white px-3 
 														aspect-square rounded-full lg:hidden"
@@ -60,7 +59,7 @@ function ProductImageGallery() {
 				</button>
 			</div>
 
-			{IMAGES.map((img, i) => 
+			{product.images.map((img, i) => 
 				<ThumbnailButton key={i} url={img} isSelected={i === image} onClick={() => setImage(i)}/>
 			)}
 		</div>
