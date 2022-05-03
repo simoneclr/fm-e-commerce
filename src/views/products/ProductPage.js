@@ -23,7 +23,7 @@ function ProductPage({productId}) {
 					{product.brand}
 				</span>
 
-				<h1 className="text-3xl font-bold">
+				<h1 className="text-3xl font-bold lg:text-4xl">
 					{product.name}
 				</h1>
 				

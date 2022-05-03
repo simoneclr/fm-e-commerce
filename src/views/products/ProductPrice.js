@@ -8,7 +8,7 @@ const ProductPrice = ({initialPrice, discountFactor}) => {
 	const isDiscounted = discountFactor > 0
 
 	return (
-		<div className="flex items-center">
+		<div className="flex items-center gap-2 lg:flex-col lg:items-start">
 			<div className="flex items-center gap-2 grow">
 				<span className="text-2xl font-bold">
 					<span className="sr-only">Price:</span>
@@ -17,7 +17,7 @@ const ProductPrice = ({initialPrice, discountFactor}) => {
 
 				{ isDiscounted ? 
 					
-					<span className="text-primaryOrange font-bold bg-paleOrange px-1 rounded-md">
+					<span className="text-primaryOrange font-bold bg-paleOrange px-1 rounded-md lg:px-2">
 						<span className="sr-only">Discount:</span>
 						{Math.round(discountFactor * 100)}%
 					</span>
@@ -28,7 +28,7 @@ const ProductPrice = ({initialPrice, discountFactor}) => {
 
 			{ isDiscounted ?
 				
-				<div className="text-grayishBlue font-bold line-through">
+				<div className="text-grayishBlue font-bold line-through lg:text-sm">
 					<span className="sr-only">Original Price:</span>
 					${initialPrice.toFixed(2)}
 				</div>
