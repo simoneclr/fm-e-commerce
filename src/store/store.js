@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit"
 
 import productsSlice from "./products/productsSlice"
+import cartSlice from "./cart/cartSlice"
 
 const preloadedState = {
 	products: {
@@ -26,7 +27,8 @@ const preloadedState = {
 
 export default configureStore({
 	reducer: {
-		products: productsSlice
+		products: productsSlice,
+		cart: cartSlice
 	},
 	preloadedState: preloadedState
 })
