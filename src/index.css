@@ -34,4 +34,23 @@
 	.ThumbnailButton[data-image-selected="true"] > img {
 		@apply opacity-25;
 	}
+
+	/* ICONS */
+	.icon {
+		@apply bg-contain;
+		@apply bg-center;
+		@apply bg-no-repeat;
+	}
+
+	.icon-cart {
+		background-image: url("../public/images/icon-cart.svg");
+	}
+
+	.icon-minus {
+		background-image: url("../public/images/icon-minus.svg");
+	}
+
+	.icon-plus {
+		background-image: url("../public/images/icon-plus.svg");
+	}
 }

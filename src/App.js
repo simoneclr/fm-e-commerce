@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App min-h-screen flex flex-col items-stretch lg:px-[10%]">
       <Navbar/>
-      <main className="grow lg:py-20">
+      <main className="grow pb-8 lg:py-20">
         <ProductPage productId={1}/>
       </main>
     </div>

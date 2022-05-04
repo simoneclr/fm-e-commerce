@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { selectProductById } from "../../store/products/productsSlice";
+import ProductControls from "./ProductControls";
 
 import ProductImageGallery from "./ProductImageGallery";
 import ProductPrice from "./ProductPrice";
@@ -33,9 +34,7 @@ function ProductPage({productId}) {
 				
 				<ProductPrice initialPrice={product.price} discountFactor={product.discount}/>
 
-				<div>
-					{/* Buttons */}
-				</div>
+				<ProductControls productId={productId}/>
 
 			</div>
 		</div>
