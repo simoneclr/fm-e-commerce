@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import CartMenuIcon from "../views/cart/CartMenuIcon";
+
 // Displays a single item from the navigation list
 const NavListItem = ({children, to, onClick}) => {
 	return (
@@ -60,9 +62,7 @@ function Navbar() {
 				</ul>
 			</nav>
 
-			<button className="shrink-0">
-				<img src="images/icon-cart.svg" alt="Shopping cart icon"/>
-			</button>
+			<CartMenuIcon className="shrink-0"/>
 
 			<div className="h-6 lg:h-12 aspect-square">
 				<img src="images/image-avatar.png" alt="User's Avatar"/>
