@@ -1,6 +1,6 @@
 import React from "react";
 
-// Givem the initial price and a discount factor, computes and displays the actual price of the product
+// Given the initial price and a discount factor, computes and displays the actual price of the product
 const ProductPrice = ({initialPrice, discountFactor}) => {
 
 	const finalPrice = (initialPrice - initialPrice * discountFactor).toFixed(2)
