@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { cartItemsAdded } from "../../store/cart/cartSlice";
 
 // Displays buttons to add a product to cart
 function ProductControls({productId}) {
 
 	// State variable controlling the item counter
 	const [counter, setCounter] = useState(0)
+
+	const dispatch = useDispatch()
 
 	// Increase counter by one
 	// TODO: Implement stock quantity
@@ -21,8 +26,10 @@ function ProductControls({productId}) {
 
 	// Adds selected number of items to cart and resets counter
 	const addToCart = () => {
-		// TODO: Implement cart
-		console.log("Added: " + counter + " to Cart.")
+		// Add items to cartSlice
+		dispatch(cartItemsAdded(productId, counter))
+
+		// Reset counter
 		setCounter(0)
 	}
 
