@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import CtaButton from "../../components/CtaButton";
 
 import { selectCartItemsNumber } from "../../store/cart/cartSlice";
 
@@ -26,9 +27,9 @@ function CartFloatingMenu({isOpen}) {
 				<div className="flex flex-col items-stretch gap-4 p-4">
 					<CartItemsList/>
 
-					<button className="bg-primaryOrange p-3">
+					<CtaButton>
 						Checkout
-					</button>
+					</CtaButton>
 				</div>
 
 				:
