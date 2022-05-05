@@ -1,4 +1,4 @@
-import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
+import { createEntityAdapter, createSelector, createSlice } from "@reduxjs/toolkit";
 
 const cartAdapter = createEntityAdapter({
 	selectId: item => item.productId
@@ -43,3 +43,11 @@ export const {
 	selectAll: selectAllCartItems,
 	selectById: selectCartItemById
 } = cartAdapter.getSelectors(state => state.cart)
+
+// Selects total number of items in the cart
+export const selectCartItemsNumber = createSelector(
+	selectAllCartItems,
+	items => items.reduce((previousValue, currentItem) => {
+		return previousValue + currentItem.quantity
+	}, 0)
+)
