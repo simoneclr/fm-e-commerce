@@ -51,6 +51,10 @@
 		background-image: url("../public/images/icon-cart.svg");
 	}
 
+	.icon-dumpster {
+		background-image: url("../public/images/icon-delete.svg")
+	}
+
 	.icon-minus {
 		background-image: url("../public/images/icon-minus.svg");
 	}

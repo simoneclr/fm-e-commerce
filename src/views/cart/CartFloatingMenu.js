@@ -13,7 +13,7 @@ function CartFloatingMenu({isOpen}) {
 
 	return (
 		<div data-cart-menu-open={isOpen} 
-					className="CartFloatingMenu absolute inset-x-2 top-[4.5rem] z-20 h-64 
+					className="CartFloatingMenu absolute inset-x-2 top-[4.5rem] z-20
 										bg-white rounded-xl shadow-2xl
 											scale-y-0 transition-transform duration-500 origin-top">
 
@@ -23,18 +23,20 @@ function CartFloatingMenu({isOpen}) {
 
 			{ itemsCount > 0 ?
 
-				<React.Fragment>
+				<div className="flex flex-col items-stretch gap-4 p-4">
 					<CartItemsList/>
 
-					<button>
+					<button className="bg-primaryOrange p-3">
 						Checkout
 					</button>
-				</React.Fragment>
+				</div>
 
 				:
 
-				<div>
-					Your Cart is Empty
+				<div className="flex justify-center items-center h-40 p-4">
+					<span className="text-darkGrayishBlue text-sm font-bold">
+						Your Cart is Empty.
+					</span>
 				</div>
 
 			}

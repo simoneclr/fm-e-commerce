@@ -12,7 +12,7 @@ function CartItemsList() {
 	const ids = useSelector(selectAllCartIds)
 
 	return (
-		<ul>
+		<ul className="flex flex-col items-stretch gap-4">
 			{ids.map(id => <CartEntry key={id} productId={id}/>)}
 		</ul>
 	)
