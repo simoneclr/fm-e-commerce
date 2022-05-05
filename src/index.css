@@ -23,6 +23,11 @@
 		@apply translate-x-0;
 	}
 
+	/* CART MENU */
+	.CartFloatingMenu[data-cart-menu-open="true"] {
+		@apply scale-y-100;
+	}
+
 	/* Gallery Thumbnauil button */
 	/* Style thumnail button corresponding to the large image currently displayed */
 	.ThumbnailButton[data-image-selected="true"] {

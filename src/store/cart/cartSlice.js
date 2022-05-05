@@ -40,6 +40,7 @@ export const {cartItemsAdded} = cartSlice.actions
 
 // Export Default Selectors
 export const {
+	selectIds: selectAllCartIds,
 	selectAll: selectAllCartItems,
 	selectById: selectCartItemById
 } = cartAdapter.getSelectors(state => state.cart)

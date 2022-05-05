@@ -34,7 +34,7 @@ function Navbar() {
 	}
 
 	return (
-		<div className="h-16 px-[5%] lg:px-0 bg-white flex items-center gap-4 
+		<header className="relative h-16 px-[5%] lg:px-0 bg-white flex items-center gap-4 
 										lg:h-24 lg:border-b-2 lg:gap-8">
 			<button className="menu-button z-50 shrink-0 lg:hidden" 
 							data-menu-open={menuOpen} onClick={onMenuButtonClicked}>
@@ -67,7 +67,7 @@ function Navbar() {
 			<div className="h-6 lg:h-12 aspect-square">
 				<img src="images/image-avatar.png" alt="User's Avatar"/>
 			</div>
-		</div>
+		</header>
 	)
 }
 
