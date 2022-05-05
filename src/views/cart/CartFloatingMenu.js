@@ -16,7 +16,7 @@ function CartFloatingMenu({isOpen}) {
 		<div data-cart-menu-open={isOpen} 
 					className="CartFloatingMenu absolute inset-x-2 top-[4.5rem] z-20
 										bg-white rounded-xl shadow-2xl
-											lg:right-0 left-auto lg:top-20 w-96
+											lg:right-0 lg:left-auto lg:top-20 lg:w-96
 											scale-y-0 transition-transform duration-500 origin-top">
 
 			<h3 className="font-bold p-4 border-b-2">
