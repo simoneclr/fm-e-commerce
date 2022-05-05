@@ -17,7 +17,6 @@ function CartMenuIcon({className}) {
 
 	// Toggles the cart menu between open and closed when clicking the cart button
 	const toggleCartMenu = () => {
-		console.log("CArt open: ", cartMenuOpen)
 		setCartMenuOpen(prevState => !prevState)
 	}
 
