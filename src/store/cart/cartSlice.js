@@ -29,6 +29,20 @@ const cartSlice = createSlice({
 					}
 				}
 			}
+		},
+		cartItemsRemoved: {
+			reducer: (state, action) => {
+				const {productId} = action.payload
+
+				cartAdapter.removeOne(state, productId)
+			},
+			prepare: (productId) => {
+				return {
+					payload: {
+						productId
+					}
+				}
+			}
 		}
 	}
 })
@@ -36,7 +50,7 @@ const cartSlice = createSlice({
 export default cartSlice.reducer
 
 // Export actions
-export const {cartItemsAdded} = cartSlice.actions
+export const {cartItemsAdded, cartItemsRemoved} = cartSlice.actions
 
 // Export Default Selectors
 export const {

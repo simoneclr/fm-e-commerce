@@ -1,8 +1,8 @@
 import React from "react";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { selectCartItemById } from "../../store/cart/cartSlice";
+import { cartItemsRemoved, selectCartItemById } from "../../store/cart/cartSlice";
 import { selectProductById } from "../../store/products/productsSlice";
 
 // Neatly renders the price for the cart entry
@@ -28,6 +28,13 @@ function CartEntry({productId}) {
 	// Select cart entry details from cartSlice
 	const cartEntry = useSelector(state => selectCartItemById(state, productId))
 
+	const dispatch = useDispatch()
+
+	// Removes entry from the cart when clicking dumpster button
+	const removeCartEntry = () => {
+		dispatch(cartItemsRemoved(productId))
+	}
+
 	return (
 		<li className="grid grid-cols-[4rem_auto_min-content] items-center gap-4">
 			<img className="rounded-md" src={product.images[0]} alt="Our awesome shoes"/>
@@ -41,7 +48,7 @@ function CartEntry({productId}) {
 												quantity={cartEntry.quantity}/>
 			</div>
 
-			<button className="icon icon-dumpster h-4 w-4">
+			<button onClick={removeCartEntry} className="icon icon-dumpster h-4 w-4">
 				<span className="sr-only">Remove from cart</span>
 			</button>
 		</li>
