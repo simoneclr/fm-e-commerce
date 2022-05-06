@@ -23,11 +23,17 @@
 		@apply translate-x-0;
 	}
 
+	/* When the side nav is open, prevent underlying content from scrolling */
+	body[data-nav-menu-open="true"] {
+		@apply overflow-hidden;
+		@apply lg:overflow-auto;
+	}
+
+	/* When the side nav is open, show a trans-black overlay over the body */
 	.nav-backdrop {
 		transition: opacity 500ms, transform 0ms 500ms;
 	}
 
-	/* When the side nav is open, show a trans-black overlay over the body */
 	.nav-backdrop[data-nav-menu-open="true"] {
 		@apply scale-100;
 		@apply opacity-100;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import CartMenuIcon from "../views/cart/CartMenuIcon";
 
@@ -22,6 +22,20 @@ function Navbar() {
 
 	// State variable controlling the open/closed navigation menu on mobile
 	const [navMenuOpen, setNavMenuOpen] = useState(false)
+
+	// When the side navigation is open, set data attribute on body to prevent scrolling
+	useEffect(() => {
+		if (navMenuOpen) {
+			document.body.dataset.navMenuOpen = true;
+		} else {
+			document.body.dataset.navMenuOpen = false;
+		}
+
+		// Cleanup
+		return () => {
+			document.body.dataset.navMenuOpen = false;
+		}
+	}, [navMenuOpen])
 
 	// Function that handles click on menu button
 	const onMenuButtonClicked = () => {
