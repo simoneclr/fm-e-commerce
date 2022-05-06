@@ -21,23 +21,23 @@ const NavListItem = ({children, to, onClick}) => {
 function Navbar() {
 
 	// State variable controlling the open/closed navigation menu on mobile
-	const [menuOpen, setMenuOpen] = useState(false)
+	const [navMenuOpen, setNavMenuOpen] = useState(false)
 
 	// Function that handles click on menu button
 	const onMenuButtonClicked = () => {
-		setMenuOpen(prevState => !prevState)
+		setNavMenuOpen(prevState => !prevState)
 	}
  
-	// Sets menuOpen to false to close the navigation menu
+	// Sets navMenuOpen to false to close the navigation menu
 	const closeNavMenu = () => {
-		setMenuOpen(false)
+		setNavMenuOpen(false)
 	}
 
 	return (
 		<header className="relative h-16 px-[5%] lg:px-0 bg-white flex items-center gap-4 
 										lg:h-24 lg:border-b-2 lg:gap-8">
 			<button className="menu-button z-50 shrink-0 lg:hidden" 
-							data-menu-open={menuOpen} onClick={onMenuButtonClicked}>
+							data-nav-menu-open={navMenuOpen} onClick={onMenuButtonClicked}>
 
 				<img className="icon-hamburger h-4 w-4" src="images/icon-menu.svg" alt="Hamburher menu icon"/>
 				<img className="icon-close h-4 w-4" src="images/icon-close.svg" alt="Close menu icon"/>
@@ -47,13 +47,19 @@ function Navbar() {
 				<img className="pb-1" src="images/logo.svg" alt="Sneakers Brand Logo"/>
 			</div>
 
-			<nav className="fixed inset-0 z-40 bg-black/75
-											-translate-x-full transition-transform duration-700
-											lg:static lg:bg-transparent lg:block lg:h-full lg:grow lg:translate-x-0 lg:transition-none"
-											data-menu-open={menuOpen}>
+			{/* Displays the trans-black overlay when mobile menu is open */}
+			<div data-nav-menu-open={navMenuOpen} onClick={closeNavMenu}
+					className="nav-backdrop lg:hidden fixed inset-0 z-30 bg-black/75 
+										scale-0 opacity-0">
+			</div>
 
-				<ul className="bg-white h-full w-64 max-w-full pt-16 pl-[5%] flex flex-col items-start gap-8
-												 lg:w-auto lg:p-0 lg:flex-row lg:items-stretch">
+			<nav data-nav-menu-open={navMenuOpen} 
+					className="fixed inset-y-0 left-0 z-40 bg-white w-64 max-w-full
+										-translate-x-full transition-transform duration-500
+										lg:static lg:bg-transparent lg:block lg:h-full lg:grow lg:translate-x-0 lg:transition-none">
+
+				<ul className="h-full pt-16 pl-[5%] flex flex-col items-start gap-8
+											lg:w-auto lg:p-0 lg:flex-row lg:items-stretch">
 					<NavListItem onClick={closeNavMenu}>Collections</NavListItem>
 					<NavListItem onClick={closeNavMenu}>Men</NavListItem>
 					<NavListItem onClick={closeNavMenu}>Women</NavListItem>

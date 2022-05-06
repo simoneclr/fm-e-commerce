@@ -8,19 +8,30 @@
 		@apply font-kumbh;
 	}
 
-	/* Mobile Menu button */
+	/* MOBILE SIDE NAVIGATION MENU */
 	/* When the menu is closed, hide the close icon */
-	.menu-button[data-menu-open="false"] > .icon-close {
+	.menu-button[data-nav-menu-open="false"] > .icon-close {
 		@apply hidden;
 	}
 
 	/* When the menu is open, hide the open icon */
-	.menu-button[data-menu-open="true"] > .icon-hamburger {
+	.menu-button[data-nav-menu-open="true"] > .icon-hamburger {
 		@apply hidden;
 	}
 
-	nav[data-menu-open="true"] {
+	nav[data-nav-menu-open="true"] {
 		@apply translate-x-0;
+	}
+
+	.nav-backdrop {
+		transition: opacity 500ms, transform 0ms 500ms;
+	}
+
+	/* When the side nav is open, show a trans-black overlay over the body */
+	.nav-backdrop[data-nav-menu-open="true"] {
+		@apply scale-100;
+		@apply opacity-100;
+		transition: opacity 500ms;
 	}
 
 	/* CART MENU */
