@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 import { selectProductById } from "../../../store/products/productsSlice";
-import GallerryIconButton from "./GalleryIconButton";
 
+import GallerryIconButton from "./GalleryIconButton";
+import GalleryLightbox from "./GalleryLightbox";
 import ThumbnailButton from "./ThumbnailButton";
 
 // Displays a gallery of images for a given product
@@ -14,6 +15,9 @@ function ProductImageGallery({productId}) {
 
 	// State variable controlling which image to show
 	const [image, setImage] = useState(0)
+
+	// State variable controlling the lightbox
+	const [lightboxOpen, setLightboxOpen] = useState(false)
 
 	// Show the previous image in the large block
 	const showPrevImage = () => {
@@ -33,10 +37,21 @@ function ProductImageGallery({productId}) {
 		}
 	}
 
+	// Opens/closes the lightbox
+	const toggleLightbox = () => {
+		setLightboxOpen(prevState => !prevState)
+	}
+
+	// Closes the lightbox
+	const closeLightbox = () => {
+		setLightboxOpen(false)
+	}
+
 	return (
 		<React.Fragment>
 			<div className="grid grid-cols-4 lg:gap-4 xl:gap-8">
-				<div className="relative h-80 overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl
+				<div onClick={toggleLightbox} 
+							className="relative h-80 overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl
 												lg:cursor-pointer lg:hover:opacity-50">
 					
 					<GallerryIconButton text={"Previous image"} action={showPrevImage}
@@ -55,6 +70,10 @@ function ProductImageGallery({productId}) {
 					<ThumbnailButton key={i} url={img} isSelected={i === image} onClick={() => setImage(i)}/>
 				)}
 			</div>
+
+			<GalleryLightbox productId={productId} isOpen={lightboxOpen} close={closeLightbox}
+												image={image} setImage={i => setImage(i)} 
+												showPrevImage={showPrevImage} showNextImage={showNextImage}/>
 		</React.Fragment>
 	)
 }
