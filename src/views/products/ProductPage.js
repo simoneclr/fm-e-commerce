@@ -2,10 +2,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { selectProductById } from "../../store/products/productsSlice";
-import ProductControls from "./ProductControls";
 
-import ProductImageGallery from "./ProductImageGallery";
+import ProductImageGallery from "./gallery/ProductImageGallery";
 import ProductPrice from "./ProductPrice";
+import ProductControls from "./ProductControls";
 
 // Displays a product page
 function ProductPage({productId}) {

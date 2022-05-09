@@ -79,4 +79,12 @@
 	.icon-plus {
 		background-image: url("../public/images/icon-plus.svg");
 	}
+
+	.icon-previous {
+		background-image: url("../public/images/icon-previous.svg")
+	}
+
+	.icon-next {
+		background-image: url("../public/images/icon-next.svg")
+	}
 }
