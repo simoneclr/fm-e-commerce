@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
 
+import brandLogo from "../assets/images/logo.svg";
+import userAvatar from "../assets/images/image-avatar.png";
+import iconMenu from "../assets/images/icon-menu.svg";
+import iconClose from "../assets/images/icon-close.svg";
+
 import CartMenuIcon from "../views/cart/CartMenuIcon";
 
 // Displays a single item from the navigation list
@@ -53,12 +58,12 @@ function Navbar() {
 			<button className="menu-button z-50 shrink-0 lg:hidden" 
 							data-nav-menu-open={navMenuOpen} onClick={onMenuButtonClicked}>
 
-				<img className="menu-icon-hamburger h-4 w-4" src="images/icon-menu.svg" alt="Hamburher menu icon"/>
-				<img className="menu-icon-close h-4 w-4 bg-none" src="images/icon-close.svg" alt="Close menu icon"/>
+				<img className="menu-icon-hamburger h-4 w-4" src={iconMenu} alt="Hamburher menu icon"/>
+				<img className="menu-icon-close h-4 w-4" src={iconClose} alt="Close menu icon"/>
 			</button>
 
 			<div className="grow lg:grow-0">
-				<img className="pb-1" src="images/logo.svg" alt="Sneakers Brand Logo"/>
+				<img className="pb-1" src={brandLogo} alt="Sneakers Brand Logo"/>
 			</div>
 
 			{/* Displays the trans-black overlay when mobile menu is open */}
@@ -85,7 +90,7 @@ function Navbar() {
 			<CartMenuIcon className="shrink-0"/>
 
 			<div className="h-6 lg:h-12 aspect-square">
-				<img src="images/image-avatar.png" alt="User's Avatar"/>
+				<img src={userAvatar} alt="User's Avatar"/>
 			</div>
 		</header>
 	)

@@ -1,5 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit"
 
+import productImage1 from "../assets/images/image-product-1.jpg"
+import productImage2 from "../assets/images/image-product-2.jpg"
+import productImage3 from "../assets/images/image-product-3.jpg"
+import productImage4 from "../assets/images/image-product-4.jpg"
+
 import productsSlice from "./products/productsSlice"
 import cartSlice from "./cart/cartSlice"
 
@@ -15,10 +20,10 @@ const preloadedState = {
 				price: 250,
 				discount: 0.5,
 				images: [
-					"images/image-product-1.jpg",
-					"images/image-product-2.jpg",
-					"images/image-product-3.jpg",
-					"images/image-product-4.jpg"
+					productImage1,
+					productImage2,
+					productImage3,
+					productImage4
 				]
 			}
 		}
