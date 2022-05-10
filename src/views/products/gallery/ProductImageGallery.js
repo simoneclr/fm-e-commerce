@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import { selectProductById } from "../../../store/products/productsSlice";
@@ -18,6 +18,20 @@ function ProductImageGallery({productId}) {
 
 	// State variable controlling the lightbox
 	const [lightboxOpen, setLightboxOpen] = useState(false)
+
+	// When the lightbox is open, set data attribute on body to prevent scrolling
+	useEffect(() => {
+		if (lightboxOpen) {
+			document.body.dataset.lightboxOpen = true;
+		} else {
+			document.body.dataset.lightboxOpen = false;
+		}
+
+		// Cleanup
+		return () => {
+			document.body.dataset.lightboxOpen = false;
+		}
+	}, [lightboxOpen])
 
 	// Show the previous image in the large block
 	const showPrevImage = () => {
