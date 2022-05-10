@@ -53,8 +53,8 @@ function Navbar() {
 			<button className="menu-button z-50 shrink-0 lg:hidden" 
 							data-nav-menu-open={navMenuOpen} onClick={onMenuButtonClicked}>
 
-				<img className="icon-hamburger h-4 w-4" src="images/icon-menu.svg" alt="Hamburher menu icon"/>
-				<img className="icon-close h-4 w-4" src="images/icon-close.svg" alt="Close menu icon"/>
+				<img className="menu-icon-hamburger h-4 w-4" src="images/icon-menu.svg" alt="Hamburher menu icon"/>
+				<img className="menu-icon-close h-4 w-4 bg-none" src="images/icon-close.svg" alt="Close menu icon"/>
 			</button>
 
 			<div className="grow lg:grow-0">

@@ -10,12 +10,12 @@
 
 	/* MOBILE SIDE NAVIGATION MENU */
 	/* When the menu is closed, hide the close icon */
-	.menu-button[data-nav-menu-open="false"] > .icon-close {
+	.menu-button[data-nav-menu-open="false"] > .menu-icon-close {
 		@apply hidden;
 	}
 
 	/* When the menu is open, hide the open icon */
-	.menu-button[data-nav-menu-open="true"] > .icon-hamburger {
+	.menu-button[data-nav-menu-open="true"] > .menu-icon-hamburger {
 		@apply hidden;
 	}
 
