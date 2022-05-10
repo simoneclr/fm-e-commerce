@@ -51,13 +51,17 @@ function ProductImageGallery({productId}) {
 		<React.Fragment>
 			<div className="grid grid-cols-4 lg:gap-4 xl:gap-8">
 				<div onClick={toggleLightbox} 
-							className="relative h-80 overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl
+							className="relative group h-80 overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl
 												lg:cursor-pointer lg:hover:opacity-50">
 					
 					<GalleryIconButton text={"Previous image"} action={showPrevImage}
 															className="icon-previous bg-[center_left_45%]
 															absolute left-[5%] top-1/2 -translate-y-1/2 lg:hidden"/>
 					
+					<span className="hidden icon icon-magnifying-glass w-8 h-8
+													absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 lg:group-hover:block">
+					</span>
+
 					<img src={product.images[image]} alt="Shoes"/>
 
 					<GalleryIconButton text={"Next image"} action={showNextImage}

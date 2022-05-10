@@ -87,4 +87,12 @@
 	.icon-next {
 		background-image: url("../public/images/icon-next.svg")
 	}
+
+	.icon-close {
+		background-image: url("../public/images/icon-close.svg")
+	}
+
+	.icon-magnifying-glass {
+		background-image: url("../public/images/icon-magnifying-glass.svg")
+	}
 }
