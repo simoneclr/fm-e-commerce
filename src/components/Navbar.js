@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import brandLogo from "../assets/images/logo.svg";
 import userAvatar from "../assets/images/image-avatar.png";
-import iconMenu from "../assets/images/icon-menu.svg";
-import iconClose from "../assets/images/icon-close.svg";
 
 import CartMenuIcon from "../views/cart/CartMenuIcon";
 
@@ -58,8 +56,13 @@ function Navbar() {
 			<button className="menu-button z-50 shrink-0 lg:hidden" 
 							data-nav-menu-open={navMenuOpen} onClick={onMenuButtonClicked}>
 
-				<img className="menu-icon-hamburger h-4 w-4" src={iconMenu} alt="Hamburher menu icon"/>
-				<img className="menu-icon-close h-4 w-4" src={iconClose} alt="Close menu icon"/>
+				<span className="icon icon-hamburger block h-4 w-4">
+					<span className="sr-only">Open Menu</span>
+				</span>
+
+				<span className="icon icon-close block h-4 w-4">
+					<span className="sr-only">Close Menu</span>
+				</span>
 			</button>
 
 			<div className="grow lg:grow-0">

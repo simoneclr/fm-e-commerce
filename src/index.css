@@ -10,12 +10,12 @@
 
 	/* MOBILE SIDE NAVIGATION MENU */
 	/* When the menu is closed, hide the close icon */
-	.menu-button[data-nav-menu-open="false"] > .menu-icon-close {
+	.menu-button[data-nav-menu-open="false"] > .icon-close {
 		@apply hidden;
 	}
 
 	/* When the menu is open, hide the open icon */
-	.menu-button[data-nav-menu-open="true"] > .menu-icon-hamburger {
+	.menu-button[data-nav-menu-open="true"] > .icon-hamburger {
 		@apply hidden;
 	}
 
@@ -72,34 +72,38 @@
 	}
 
 	.icon-cart {
-		background-image: url("../public/images/icon-cart.svg");
+		background-image: url("./assets/images/icon-cart.svg");
 	}
 
 	.icon-dumpster {
-		background-image: url("../public/images/icon-delete.svg")
+		background-image: url("./assets/images/icon-delete.svg")
 	}
 
 	.icon-minus {
-		background-image: url("../public/images/icon-minus.svg");
+		background-image: url("./assets/images/icon-minus.svg");
 	}
 
 	.icon-plus {
-		background-image: url("../public/images/icon-plus.svg");
+		background-image: url("./assets/images/icon-plus.svg");
 	}
 
 	.icon-previous {
-		background-image: url("../public/images/icon-previous.svg")
+		background-image: url("./assets/images/icon-previous.svg")
 	}
 
 	.icon-next {
-		background-image: url("../public/images/icon-next.svg")
+		background-image: url("./assets/images/icon-next.svg")
+	}
+
+	.icon-hamburger {
+		background-image: url("./assets/images/icon-menu.svg")
 	}
 
 	.icon-close {
-		background-image: url("../public/images/icon-close.svg")
+		background-image: url("./assets/images/icon-close.svg")
 	}
 
 	.icon-magnifying-glass {
-		background-image: url("../public/images/icon-magnifying-glass.svg")
+		background-image: url("./assets/images/icon-magnifying-glass.svg")
 	}
 }
