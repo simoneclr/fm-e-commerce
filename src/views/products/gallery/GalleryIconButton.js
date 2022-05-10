@@ -1,7 +1,7 @@
 import React from "react";
 
 // Displays an icon button
-function GallerryIconButton({className, text, action}) {
+function GalleryIconButton({className, text, action}) {
 	return (
 		<button onClick={action}
 						className={(className ? className : "") + " " + 
@@ -11,4 +11,4 @@ function GallerryIconButton({className, text, action}) {
 	)
 }
 
-export default GallerryIconButton
+export default GalleryIconButton

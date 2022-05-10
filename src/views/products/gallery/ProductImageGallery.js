@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import { selectProductById } from "../../../store/products/productsSlice";
 
-import GallerryIconButton from "./GalleryIconButton";
+import GalleryIconButton from "./GalleryIconButton";
 import GalleryLightbox from "./GalleryLightbox";
 import ThumbnailButton from "./ThumbnailButton";
 
@@ -54,13 +54,13 @@ function ProductImageGallery({productId}) {
 							className="relative h-80 overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl
 												lg:cursor-pointer lg:hover:opacity-50">
 					
-					<GallerryIconButton text={"Previous image"} action={showPrevImage}
+					<GalleryIconButton text={"Previous image"} action={showPrevImage}
 															className="icon-previous bg-[center_left_45%]
 															absolute left-[5%] top-1/2 -translate-y-1/2 lg:hidden"/>
 					
 					<img src={product.images[image]} alt="Shoes"/>
 
-					<GallerryIconButton text={"Next image"} action={showNextImage}
+					<GalleryIconButton text={"Next image"} action={showNextImage}
 															className="icon-next bg-[center_right_45%]
 															absolute right-[5%] top-1/2 -translate-y-1/2 lg:hidden"/>
 
