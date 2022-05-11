@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 
 import { selectCartItemsNumber } from "../../store/cart/cartSlice";
 
+import { ReactComponent as CartIcon } from "../../assets/svgs/icon-cart.svg"
+
 import CartFloatingMenu from "./CartFloatingMenu";
 
 // Displays a cart icon, with a badge showing the number of items in the cart (if any),
@@ -23,8 +25,12 @@ function CartMenuIcon({className}) {
 	return (
 		<React.Fragment>
 			<button onClick={toggleCartMenu} 
-							className={(className ? className : "") + " icon icon-cart w-6 h-5 relative"}>
+							className={(className ? className : "") + " group w-6 h-5 relative"}>
+				
 				<span className="sr-only">View Cart</span>
+
+				<CartIcon className="fill-darkGrayishBlue group-hover:fill-veryDarkBlue"/>
+
 				{ itemsCount > 0 ?
 
 					<span className="absolute right-0 -top-1 bg-primaryOrange text-white text-[.5rem] font-bold

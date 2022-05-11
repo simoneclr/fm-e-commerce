@@ -61,49 +61,7 @@
 	/* When the lightbox is open, prevent underlying content from scrolling */
 	body[data-lightbox-open="true"] {
 		@apply lg:overflow-hidden;
+		/* Comensates for disappearing scrollbar */
 		@apply lg:pr-4;
-	}
-
-	/* ICONS */
-	.icon {
-		@apply bg-contain;
-		@apply bg-center;
-		@apply bg-no-repeat;
-	}
-
-	.icon-cart {
-		background-image: url("./assets/images/icon-cart.svg");
-	}
-
-	.icon-dumpster {
-		background-image: url("./assets/images/icon-delete.svg")
-	}
-
-	.icon-minus {
-		background-image: url("./assets/images/icon-minus.svg");
-	}
-
-	.icon-plus {
-		background-image: url("./assets/images/icon-plus.svg");
-	}
-
-	.icon-previous {
-		background-image: url("./assets/images/icon-previous.svg")
-	}
-
-	.icon-next {
-		background-image: url("./assets/images/icon-next.svg")
-	}
-
-	.icon-hamburger {
-		background-image: url("./assets/images/icon-menu.svg")
-	}
-
-	.icon-close {
-		background-image: url("./assets/images/icon-close.svg")
-	}
-
-	.icon-magnifying-glass {
-		background-image: url("./assets/images/icon-magnifying-glass.svg")
 	}
 }

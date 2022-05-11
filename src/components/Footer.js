@@ -6,7 +6,7 @@ import { ReactComponent as Logo } from "../assets/svgs/logo.svg"
 function Footer() {
 	return (
 		<footer className="bg-veryDarkBlue text-grayishBlue text-sm py-8 px-[5%] lg:px-[10%]">
-			<Logo className="fill-lightGrayishBlue"/>
+			<Logo title="Sneakers brand logo" className="fill-lightGrayishBlue"/>
 
 			<p className="mt-6">
 				<span className="uppercase font-bold text-lightGrayishBlue">

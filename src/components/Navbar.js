@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from "../assets/svgs/logo.svg";
 import userAvatar from "../assets/images/image-avatar.png";
 
 import CartMenuIcon from "../views/cart/CartMenuIcon";
+import MobileMenuButton from "./MobileMenuButton";
 
 // Displays a single item from the navigation list
 const NavListItem = ({children, to, onClick}) => {
@@ -41,7 +42,7 @@ function Navbar() {
 	}, [navMenuOpen])
 
 	// Function that handles click on menu button
-	const onMenuButtonClicked = () => {
+	const toggleNavMenu = () => {
 		setNavMenuOpen(prevState => !prevState)
 	}
  
@@ -53,20 +54,11 @@ function Navbar() {
 	return (
 		<header className="relative h-16 px-[5%] lg:px-0 lg:mx-[10%] bg-white flex items-center gap-4 
 										lg:h-24 lg:border-b-2 lg:gap-8">
-			<button className="menu-button z-50 shrink-0 lg:hidden" 
-							data-nav-menu-open={navMenuOpen} onClick={onMenuButtonClicked}>
-
-				<span className="icon icon-hamburger block h-4 w-4">
-					<span className="sr-only">Open Menu</span>
-				</span>
-
-				<span className="icon icon-close block h-4 w-4">
-					<span className="sr-only">Close Menu</span>
-				</span>
-			</button>
+			
+			<MobileMenuButton isNavMenuOpen={navMenuOpen} onClick={toggleNavMenu}/>
 
 			<div className="grow pb-1 lg:grow-0">
-				<Logo className="fill-veryDarkBlue"/>
+				<Logo title="Sneakers brand logo" className="fill-veryDarkBlue"/>
 			</div>
 
 			{/* Displays the trans-black overlay when mobile menu is open */}

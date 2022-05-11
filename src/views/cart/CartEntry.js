@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { cartItemsRemoved, selectCartItemById } from "../../store/cart/cartSlice";
 import { selectProductById } from "../../store/products/productsSlice";
 
+import { ReactComponent as DeleteIcon } from "../../assets/svgs/icon-delete.svg"
+
 // Neatly renders the price for the cart entry
 const CartEntryPrice = ({className, initialPrice, discountFactor, quantity}) => {
 
@@ -48,8 +50,9 @@ function CartEntry({productId}) {
 												quantity={cartEntry.quantity}/>
 			</div>
 
-			<button onClick={removeCartEntry} className="icon icon-dumpster h-4 w-4">
+			<button onClick={removeCartEntry} className="group h-4 w-4">
 				<span className="sr-only">Remove from cart</span>
+				<DeleteIcon className="fill-grayishBlue group-hover:fill-veryDarkBlue group-active:fill-darkGrayishBlue"/>
 			</button>
 		</li>
 	)

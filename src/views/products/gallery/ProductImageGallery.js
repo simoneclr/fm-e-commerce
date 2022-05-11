@@ -3,6 +3,10 @@ import { useSelector } from "react-redux";
 
 import { selectProductById } from "../../../store/products/productsSlice";
 
+import { ReactComponent as PrevIcon } from "../../../assets/svgs/icon-previous.svg"
+import { ReactComponent as NextIcon } from "../../../assets/svgs/icon-next.svg"
+import { ReactComponent as MagnifyingIcon } from "../../../assets/svgs/icon-magnifying-glass.svg"
+
 import GalleryIconButton from "./GalleryIconButton";
 import GalleryLightbox from "./GalleryLightbox";
 import ThumbnailButton from "./ThumbnailButton";
@@ -69,19 +73,21 @@ function ProductImageGallery({productId}) {
 												lg:cursor-pointer lg:hover:opacity-50">
 					
 					<GalleryIconButton text={"Previous image"} action={showPrevImage}
-															className="icon-previous bg-[center_left_45%]
-															absolute left-[5%] top-1/2 -translate-y-1/2 lg:hidden"/>
+															className="absolute left-[5%] top-1/2 -translate-y-1/2 lg:hidden">
+						
+						<PrevIcon className="w-4 mx-auto"/>
+					</GalleryIconButton>
 					
-					<span className="hidden icon icon-magnifying-glass w-8 h-8
-													absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 lg:group-hover:block">
-					</span>
+					<MagnifyingIcon className="hidden w-16 h-16 fill-veryDarkBlue
+													absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 lg:group-hover:block"/>
 
 					<img src={product.images[image]} alt="Shoes"/>
 
 					<GalleryIconButton text={"Next image"} action={showNextImage}
-															className="icon-next bg-[center_right_45%]
-															absolute right-[5%] top-1/2 -translate-y-1/2 lg:hidden"/>
-
+															className="absolute right-[5%] top-1/2 -translate-y-1/2 lg:hidden">
+																
+						<NextIcon className="w-4 mx-auto"/>
+					</GalleryIconButton>
 				</div>
 
 				{product.images.map((img, i) => 

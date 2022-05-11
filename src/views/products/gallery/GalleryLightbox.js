@@ -3,6 +3,10 @@ import { useSelector } from "react-redux";
 
 import { selectProductById } from "../../../store/products/productsSlice";
 
+import { ReactComponent as PrevIcon } from "../../../assets/svgs/icon-previous.svg"
+import { ReactComponent as NextIcon } from "../../../assets/svgs/icon-next.svg"
+import { ReactComponent as CloseIcon } from "../../../assets/svgs/icon-close.svg"
+
 import GalleryIconButton from "./GalleryIconButton";
 import ThumbnailButton from "./ThumbnailButton";
 
@@ -43,20 +47,24 @@ function GalleryLightbox({productId, isOpen, close,image, setImage, showPrevImag
 			<div className="flex flex-col gap-8 items-center">
 				<div className="relative w-[65vh]">
 
-					<button className="icon icon-close w-6 h-6
-														absolute right-0 -top-10">
+					<button className="group w-5 h-5 absolute right-0 -top-8">
 						<span className="sr-only">Close Lghtbox</span>
+						<CloseIcon className="fill-white group-hover:fill-primaryOrange group-active:fill-grayishBlue"/>
 					</button>
 
 					<GalleryIconButton text={"Previous image"} action={onPreviousImageClick}
-															className="icon-previous bg-[center_left_45%]
-															absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2"/>
+															className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
+						
+						<PrevIcon className="w-4 mx-auto"/>
+					</GalleryIconButton>
 
 					<img src={product.images[image]} alt="Shoes" className="rounded-2xl" />
 
 					<GalleryIconButton text={"Nest image"} action={onNextImageClick}
-															className="icon-next bg-[center_right_45%]
-															absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2"/>
+															className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2">
+						
+						<NextIcon className="w-4 mx-auto"/>
+					</GalleryIconButton>
 
 				</div>
 
