@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import brandLogo from "../assets/images/logo.svg";
+import { ReactComponent as Logo } from "../assets/svgs/logo.svg";
 import userAvatar from "../assets/images/image-avatar.png";
 
 import CartMenuIcon from "../views/cart/CartMenuIcon";
@@ -51,7 +51,7 @@ function Navbar() {
 	}
 
 	return (
-		<header className="relative h-16 px-[5%] lg:px-0 bg-white flex items-center gap-4 
+		<header className="relative h-16 px-[5%] lg:px-0 lg:mx-[10%] bg-white flex items-center gap-4 
 										lg:h-24 lg:border-b-2 lg:gap-8">
 			<button className="menu-button z-50 shrink-0 lg:hidden" 
 							data-nav-menu-open={navMenuOpen} onClick={onMenuButtonClicked}>
@@ -65,8 +65,8 @@ function Navbar() {
 				</span>
 			</button>
 
-			<div className="grow lg:grow-0">
-				<img className="pb-1" src={brandLogo} alt="Sneakers Brand Logo"/>
+			<div className="grow pb-1 lg:grow-0">
+				<Logo className="fill-veryDarkBlue"/>
 			</div>
 
 			{/* Displays the trans-black overlay when mobile menu is open */}
