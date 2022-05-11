@@ -76,11 +76,11 @@ function Navbar() {
 			</div>
 
 			<nav data-nav-menu-open={navMenuOpen} 
-					className="fixed inset-y-0 left-0 z-40 bg-white w-64 max-w-full
+					className="fixed inset-y-0 left-0 z-40 bg-white w-64 max-w-full pl-[5%] pt-16 lg:p-0
 										-translate-x-full transition-transform duration-500
 										lg:static lg:bg-transparent lg:block lg:h-full lg:grow lg:translate-x-0 lg:transition-none">
 
-				<ul className="h-full pt-16 pl-[5%] flex flex-col items-start gap-8
+				<ul className="h-full pt-8 flex flex-col items-start gap-8
 											lg:w-auto lg:p-0 lg:flex-row lg:items-stretch">
 					<NavListItem onClick={closeNavMenu}>Collections</NavListItem>
 					<NavListItem onClick={closeNavMenu}>Men</NavListItem>
