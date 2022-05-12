@@ -10,7 +10,7 @@ function App() {
       <div className='grow max-w-[1440px] mx-auto'>
         <Navbar/>
       
-        <main className="pb-8 lg:py-20 lg:px-[10%]">
+        <main className="pb-8 md:pt-4 md:pb-16 lg:py-20 lg:px-[10%]">
           <ProductPage productId={1}/>
         </main>
       </div>      

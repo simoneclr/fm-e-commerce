@@ -69,11 +69,12 @@ function ProductImageGallery({productId}) {
 		<React.Fragment>
 			<div className="grid grid-cols-4 lg:gap-4 xl:gap-8">
 				<div onClick={toggleLightbox} 
-							className="relative group h-[85vw] overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl
+							className="relative group h-[85vw] overflow-hidden md:h-auto col-span-4 md:rounded-2xl
 												lg:cursor-pointer lg:hover:opacity-50">
 					
 					<GalleryIconButton text={"Previous image"} action={showPrevImage}
-															className="absolute left-[5%] sm:left-[10%] top-1/2 -translate-y-1/2 lg:hidden">
+															className="absolute left-[5%] sm:left-[10%] md:left-[5%] 
+																				top-1/2 -translate-y-1/2 lg:hidden">
 						
 						<PrevIcon className="w-4 mx-auto"/>
 					</GalleryIconButton>
@@ -84,7 +85,8 @@ function ProductImageGallery({productId}) {
 					<img src={product.images[image]} alt="Shoes"/>
 
 					<GalleryIconButton text={"Next image"} action={showNextImage}
-															className="absolute right-[5%] sm:right-[10%] top-1/2 -translate-y-1/2 lg:hidden">
+															className="absolute right-[5%] sm:right-[10%] md:right-[5%] 
+																					top-1/2 -translate-y-1/2 lg:hidden">
 																
 						<NextIcon className="w-4 mx-auto"/>
 					</GalleryIconButton>

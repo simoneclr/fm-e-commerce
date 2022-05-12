@@ -15,7 +15,7 @@ function ProductPage({productId}) {
 
 	return (
 		<div className="flex flex-col lg:flex-row items-stretch lg:justify-between gap-8 lg:gap-12">
-			<div className="lg:w-1/2 lg:px-12">
+			<div className="md:px-[10%] lg:w-1/2 lg:px-12">
 				<ProductImageGallery productId={productId}/>			
 			</div>
 
