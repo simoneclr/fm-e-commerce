@@ -8,7 +8,7 @@ const ProductPrice = ({initialPrice, discountFactor}) => {
 	const isDiscounted = discountFactor > 0
 
 	return (
-		<div className="flex items-center gap-2 lg:flex-col lg:items-start">
+		<div className="flex items-center gap-2 xl:flex-col xl:items-start">
 			<div className="flex items-center gap-2 grow sm:grow-0">
 				<span className="text-2xl font-bold">
 					<span className="sr-only">Price:</span>
@@ -28,7 +28,7 @@ const ProductPrice = ({initialPrice, discountFactor}) => {
 
 			{ isDiscounted ?
 				
-				<div className="text-grayishBlue font-bold line-through lg:text-sm">
+				<div className="text-grayishBlue font-bold line-through xl:text-sm">
 					<span className="sr-only">Original Price:</span>
 					${initialPrice.toFixed(2)}
 				</div>
