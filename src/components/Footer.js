@@ -7,7 +7,7 @@ function Footer() {
 	return (
 		<footer className="bg-veryDarkBlue w-full">
 			<div className="max-w-[1440px] mx-auto">
-				<div className="text-grayishBlue text-sm py-8 px-[5%] lg:px-[10%]">
+				<div className="text-grayishBlue text-sm py-8 px-[5%] sm:px-[10%]">
 					<Logo title="Sneakers brand logo" className="fill-lightGrayishBlue"/>
 
 					<p className="mt-6">

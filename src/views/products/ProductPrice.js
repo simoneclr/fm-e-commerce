@@ -9,7 +9,7 @@ const ProductPrice = ({initialPrice, discountFactor}) => {
 
 	return (
 		<div className="flex items-center gap-2 lg:flex-col lg:items-start">
-			<div className="flex items-center gap-2 grow">
+			<div className="flex items-center gap-2 grow sm:grow-0">
 				<span className="text-2xl font-bold">
 					<span className="sr-only">Price:</span>
 					${finalPrice}

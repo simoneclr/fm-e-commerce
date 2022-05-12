@@ -40,8 +40,9 @@ function ProductControls({productId}) {
 	}
 
 	return (
-		<div className="flex flex-col gap-4 items-stretch lg:flex-row">
-			<div className="bg-lightGrayishBlue p-3 rounded-lg flex items-center justify-between gap-3 lg:w-1/3">
+		<div className="flex flex-col gap-4 items-stretch sm:flex-row sm:justify-between">
+			<div className="bg-lightGrayishBlue p-3 rounded-lg flex items-center justify-between gap-3 
+											sm:w-1/2 lg:w-1/3">
 				<button onClick={decrement} className="w-4 h-4 hover:opacity-75">
 					<span className="sr-only">Reduce order quantity by one</span>
 					<MinusIcon className="fill-primaryOrange group-hover:opacity-50"/>
@@ -59,7 +60,7 @@ function ProductControls({productId}) {
 			</div>
 
 			<CtaButton onClick={addToCart} disabled={counter <= 0}
-							className="flex items-center justify-center gap-3 lg:grow">
+							className="flex items-center justify-center gap-3 sm:grow">
 				<CartIcon className="fill-current w-6 h-5"/>
 
 				<span>Add to Cart</span>

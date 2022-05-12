@@ -52,7 +52,7 @@ function Navbar() {
 	}
 
 	return (
-		<header className="relative h-16 px-[5%] lg:px-0 lg:mx-[10%] bg-white flex items-center gap-4 
+		<header className="relative h-16 px-[5%] sm:px-[10%] lg:px-0 lg:mx-[10%] bg-white flex items-center gap-4 
 										lg:h-24 lg:border-b-2 lg:gap-8">
 			
 			<MobileMenuButton isNavMenuOpen={navMenuOpen} onClick={toggleNavMenu}/>
@@ -68,7 +68,7 @@ function Navbar() {
 			</div>
 
 			<nav data-nav-menu-open={navMenuOpen} 
-					className="fixed inset-y-0 left-0 z-40 bg-white w-64 max-w-full pl-[5%] pt-16 lg:p-0
+					className="fixed inset-y-0 left-0 z-40 bg-white w-64 sm:w-80 max-w-full pl-[5%] sm:pl-[10%] pt-16 lg:p-0
 										-translate-x-full transition-transform duration-500
 										lg:static lg:bg-transparent lg:block lg:h-full lg:grow lg:translate-x-0 lg:transition-none">
 

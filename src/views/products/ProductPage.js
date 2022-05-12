@@ -19,12 +19,12 @@ function ProductPage({productId}) {
 				<ProductImageGallery productId={productId}/>			
 			</div>
 
-			<div className="flex flex-col gap-4 px-[5%] lg:w-1/2 lg:px-12">
-				<span className="text-primaryOrange text-sm font-bold uppercase">
-					{product.brand}
-				</span>
-
+			<div className="flex flex-col gap-4 sm:gap-8 px-[5%] sm:px-[10%] lg:w-1/2 lg:px-12">
 				<h1 className="text-3xl font-bold lg:text-4xl">
+					<span className="block text-primaryOrange text-sm font-bold uppercase mb-4">
+						{product.brand}
+					</span>
+
 					{product.name}
 				</h1>
 				
