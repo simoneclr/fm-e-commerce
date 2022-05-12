@@ -69,7 +69,7 @@ function ProductImageGallery({productId}) {
 		<React.Fragment>
 			<div className="grid grid-cols-4 lg:gap-4 xl:gap-8">
 				<div onClick={toggleLightbox} 
-							className="relative group h-80 overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl
+							className="relative group h-[85vw] overflow-hidden lg:h-auto col-span-4 lg:rounded-2xl
 												lg:cursor-pointer lg:hover:opacity-50">
 					
 					<GalleryIconButton text={"Previous image"} action={showPrevImage}
