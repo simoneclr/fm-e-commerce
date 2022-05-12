@@ -2,6 +2,8 @@
 
 ![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
 
+[Live Demo](https://simoneclr.github.io/fm-e-commerce/)
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
