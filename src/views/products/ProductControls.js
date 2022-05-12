@@ -42,17 +42,18 @@ function ProductControls({productId}) {
 	return (
 		<div className="flex flex-col gap-4 items-stretch lg:flex-row">
 			<div className="bg-lightGrayishBlue p-3 rounded-lg flex items-center justify-between gap-3 lg:w-1/3">
-				<button onClick={decrement} className="w-4 h-4">
-					<span className="sr-only">Remove one from Cart</span>
-					<MinusIcon className="fill-primaryOrange"/>
+				<button onClick={decrement} className="w-4 h-4 hover:opacity-75">
+					<span className="sr-only">Reduce order quantity by one</span>
+					<MinusIcon className="fill-primaryOrange group-hover:opacity-50"/>
 				</button>
 
 				<span className="font-bold">
+					<span className="sr-only">Order quantity: </span>
 					{counter}
 				</span>
 
-				<button onClick={increment} className="w-4 h-4">
-					<span className="sr-only">Add one to Cart</span>
+				<button onClick={increment} className="w-4 h-4 hover:opacity-75">
+					<span className="sr-only">Increase order quantity by one</span>
 					<PlusIcon className="fill-primaryOrange"/>
 				</button>
 			</div>
