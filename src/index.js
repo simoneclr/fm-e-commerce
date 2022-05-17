@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from "react-dom/client"
 import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
 
 import './index.css';
 
@@ -13,7 +14,9 @@ const root = createRoot(container)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App/>
+      <HashRouter>
+        <App/>
+      </HashRouter>
     </Provider>
   </React.StrictMode>
 );

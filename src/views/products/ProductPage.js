@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 import { selectProductById } from "../../store/products/productsSlice";
 
@@ -8,12 +9,16 @@ import ProductPrice from "./ProductPrice";
 import ProductControls from "./ProductControls";
 
 // Displays a product page
-function ProductPage({productId}) {
+function ProductPage() {
+
+	const {productId} = useParams()
 
 	// Select product data from redux store
 	const product = useSelector(state => selectProductById(state, productId))
 
 	return (
+		product ?
+
 		<div className="flex flex-col lg:flex-row items-stretch lg:justify-between gap-8 lg:gap-24 xl:gap-12">
 			<div className="md:px-[10%] lg:w-1/2 lg:px-0 xl:px-12">
 				<ProductImageGallery productId={productId}/>			
@@ -38,6 +43,13 @@ function ProductPage({productId}) {
 
 			</div>
 		</div>
+
+		:
+		
+		<p className="text-2xl">
+			{/* TODO: Implement fancy error component */}
+			These are not the <span className="line-through">droids</span> shoes you are looking for...
+		</p>		
 	)
 }
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../assets/svgs/logo.svg";
 import userAvatar from "../assets/images/image-avatar.png";
@@ -57,9 +58,10 @@ function Navbar() {
 			
 			<MobileMenuButton isNavMenuOpen={navMenuOpen} onClick={toggleNavMenu}/>
 
-			<div className="grow pb-1 lg:grow-0">
+			<Link to="/" className="grow pb-1 lg:grow-0">
+				<span className="sr-only">Home</span>
 				<Logo title="Sneakers brand logo" className="fill-veryDarkBlue"/>
-			</div>
+			</Link>
 
 			{/* Displays the trans-black overlay when mobile menu is open */}
 			<div data-nav-menu-open={navMenuOpen} onClick={closeNavMenu}
