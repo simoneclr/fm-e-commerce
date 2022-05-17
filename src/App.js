@@ -4,6 +4,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProductPage from './views/products/ProductPage';
+import CheckoutPage from './views/cart/CheckoutPage';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path='products'>
               <Route path=":productId" element={<ProductPage productId={1}/>}/>
-            </Route>            
+            </Route>
+            <Route path="checkout" element={<CheckoutPage/>}/>            
           </Routes>
         </main>
       </div>      

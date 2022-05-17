@@ -22,6 +22,11 @@ function CartMenuIcon({className}) {
 		setCartMenuOpen(prevState => !prevState)
 	}
 
+	// Closes the cart meu
+	const closeCartMenu = () => {
+		setCartMenuOpen(false)
+	}
+
 	return (
 		<React.Fragment>
 			<button onClick={toggleCartMenu} 
@@ -42,7 +47,7 @@ function CartMenuIcon({className}) {
 				}
 			</button>
 
-			<CartFloatingMenu isOpen={cartMenuOpen}/>
+			<CartFloatingMenu isOpen={cartMenuOpen} closeMenu={closeCartMenu}/>
 		</React.Fragment>
 	)
 }

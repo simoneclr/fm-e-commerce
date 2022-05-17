@@ -1,16 +1,26 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import CtaButton from "../../components/CtaButton";
+import { useNavigate } from "react-router-dom";
 
 import { selectCartItemsNumber } from "../../store/cart/cartSlice";
 
 import CartItemsList from "./CartItemsList";
+import CtaButton from "../../components/CtaButton";
 
 // Displays a floating cart menu
-function CartFloatingMenu({isOpen}) {
+function CartFloatingMenu({isOpen, closeMenu}) {
+
+	const navigate = useNavigate()
 
 	// Select number of items in the cart
 	const itemsCount = useSelector(selectCartItemsNumber)
+
+	// When clicking the checkout button, close the cart menu and redirect to the checkout page
+	const handleCheckoutClick = () => {
+		closeMenu()
+
+		navigate("checkout")
+	}
 
 	return (
 		<div data-cart-menu-open={isOpen} 
@@ -28,7 +38,7 @@ function CartFloatingMenu({isOpen}) {
 				<div className="flex flex-col items-stretch gap-4 p-4">
 					<CartItemsList/>
 
-					<CtaButton>
+					<CtaButton onClick={handleCheckoutClick}>
 						Checkout
 					</CtaButton>
 				</div>
