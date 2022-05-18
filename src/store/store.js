@@ -27,6 +27,15 @@ const preloadedState = {
 				]
 			}
 		}
+	},
+	cart: {
+		ids: [1],
+		entities: {
+			"1": {
+				productId: 1,
+				quantity: 17
+			}
+		}
 	}
 }
 
