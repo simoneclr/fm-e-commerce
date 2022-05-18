@@ -66,3 +66,18 @@ export const selectCartItemsNumber = createSelector(
 		return previousValue + currentItem.quantity
 	}, 0)
 )
+
+// Selects total cost of items in the cart
+// Uses state from two different slices. Unsure if its good practice or not
+export const selectTotalCartPrice = createSelector(
+	[selectAllCartItems, state => state.products.entities],
+	(cartItems, products) => cartItems.reduce((sum, item) => {
+		const id = item.productId
+
+		const price = products[id].price * (1 - products[id].discount)
+
+		const total = price * item.quantity
+
+		return sum + total
+	}, 0)
+)
