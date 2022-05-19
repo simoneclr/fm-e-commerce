@@ -5,6 +5,7 @@ import { selectTotalCartPrice } from "../../store/cart/cartSlice";
 
 import CartItemsList from "../cart/CartItemsList";
 import CtaButton from "../../components/CtaButton";
+import CheckoutForm from "./CheckoutForm";
 
 // Displays the checkout page
 function CheckoutPage() {
@@ -17,12 +18,13 @@ function CheckoutPage() {
 	const vat = 0.25
 
 	return (
-		<div className="flex flex-col gap-8 px-[5%] sm:px-[10%] lg:px-0 lg:flex-row lg:justify-between">
-			<div className="lg:grow lg:rounded-xl lg:shadow-xl">
-				{/* Form goes here */}
+		<div className="flex flex-col gap-8 px-[5%] sm:px-[10%] 
+										lg:px-0 lg:flex-row lg:items-start lg:justify-between">
+			<div className="py-4 lg:px-4 lg:grow lg:rounded-xl lg:shadow-xl">
+				<CheckoutForm/>
 			</div>
 
-			<div className="flex flex-col items-stretch gap-8 py-4 lg:w-96 lg:px-4 lg:rounded-xl lg:shadow-xl">
+			<div className="flex flex-col items-stretch gap-8 py-4 lg:w-96 lg:shrink-0 lg:px-4 lg:rounded-xl lg:shadow-xl">
 				<h3 className="font-bold text-2xl pb-2 border-b-2">
 					Order Summary
 				</h3>
