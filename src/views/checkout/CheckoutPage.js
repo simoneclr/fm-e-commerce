@@ -47,7 +47,7 @@ function CheckoutPage() {
 													className="font-bold uppercase"/>
 				</div>
 
-				<CtaButton>
+				<CtaButton type="submit" form="checkoutForm">
 					Confirm Order
 				</CtaButton>
 			</div>
