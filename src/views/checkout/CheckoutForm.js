@@ -6,7 +6,7 @@ import FloatingLabelInput from "../../components/FloatingLabelInput";
 function CheckoutForm() {
 	return (
 		<form id="checkout-form" className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-			<h3 className="uppercase font-bold xl:col-span-2">
+			<h3 className="uppercase font-bold text-primaryOrange xl:col-span-2">
 				Billing Details
 			</h3>
 
@@ -22,7 +22,7 @@ function CheckoutForm() {
 				Phone Number
 			</FloatingLabelInput>
 
-			<h3 className="uppercase font-bold xl:col-span-2">
+			<h3 className="uppercase font-bold text-primaryOrange xl:col-span-2">
 				Shipping Info
 			</h3>
 
@@ -42,7 +42,7 @@ function CheckoutForm() {
 				ZIP Code
 			</FloatingLabelInput>
 
-			<h3 className="uppercase font-bold xl:col-span-2">
+			<h3 className="uppercase font-bold text-primaryOrange xl:col-span-2">
 				Payment Details
 			</h3>
 

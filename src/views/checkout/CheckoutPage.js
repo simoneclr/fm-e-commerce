@@ -21,13 +21,18 @@ function CheckoutPage() {
 		<div className="flex flex-col gap-8 px-[5%] sm:px-[10%] 
 										lg:px-0 lg:flex-row lg:items-start lg:justify-between">
 			<div className="py-4 lg:px-4 lg:grow lg:rounded-xl lg:shadow-xl">
+
+				<h2 className="font-bold text-2xl pb-2 mb-8 border-b-2">
+					Checkout
+				</h2>
+
 				<CheckoutForm/>
 			</div>
 
 			<div className="flex flex-col items-stretch gap-8 py-4 lg:w-96 lg:shrink-0 lg:px-4 lg:rounded-xl lg:shadow-xl">
-				<h3 className="font-bold text-2xl pb-2 border-b-2">
+				<h2 className="font-bold text-2xl pb-2 border-b-2">
 					Order Summary
-				</h3>
+				</h2>
 
 				<CartItemsList/>
 
