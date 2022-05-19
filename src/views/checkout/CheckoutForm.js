@@ -10,8 +10,12 @@ function CheckoutForm() {
 				Billing Details
 			</h3>
 
+			<FloatingLabelInput type="text" name="firstName">
+				First Name
+			</FloatingLabelInput>
+
 			<FloatingLabelInput type="text" name="name">
-				Name
+				Last Name
 			</FloatingLabelInput>
 
 			<FloatingLabelInput type="email" name="email">
