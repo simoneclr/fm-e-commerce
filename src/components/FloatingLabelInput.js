@@ -1,10 +1,10 @@
 import React from "react";
 
 // Displays an input with a floating label
-function FloatingLabelInput({type, name, value, onChange, children, className}) {
+function FloatingLabelInput({type, name, value, onChange, required, children, className}) {
 	return (
 		<div className={(className ? className : "") + " relative"}>
-			<input type={type} name={name} id={name} placeholder={name} value={value} onChange={onChange}
+			<input type={type} name={name} id={name} placeholder={name} required={required} value={value} onChange={onChange}
 						className="peer p-2 w-full rounded-lg outline outline-2 outline-veryDarkBlue placeholder:scale-0
 											focus:outline-primaryOrange"/>
 
