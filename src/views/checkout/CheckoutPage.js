@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import { selectTotalCartPrice } from "../../store/cart/cartSlice";
 
-import CartItemsList from "./CartItemsList";
+import CartItemsList from "../cart/CartItemsList";
 import CtaButton from "../../components/CtaButton";
 
 // Displays the checkout page

@@ -4,7 +4,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProductPage from './views/products/ProductPage';
-import CheckoutPage from './views/cart/CheckoutPage';
+import CheckoutPage from './views/checkout/CheckoutPage';
 
 function App() {
   return (
