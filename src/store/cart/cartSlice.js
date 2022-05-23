@@ -71,6 +71,11 @@ const cartSlice = createSlice({
 					}
 				}
 			}
+		},
+		orderAcknowledged: (state, action) => {
+			state.checkoutStatus = "idle"
+			state.orderId = null
+			state.error = null
 		}
 	},
 	extraReducers: (builder) => {
@@ -97,7 +102,7 @@ const cartSlice = createSlice({
 export default cartSlice.reducer
 
 // Export actions
-export const {cartItemsAdded, cartItemsRemoved} = cartSlice.actions
+export const {cartItemsAdded, cartItemsRemoved, orderAcknowledged} = cartSlice.actions
 
 // Export Default Selectors
 export const {
