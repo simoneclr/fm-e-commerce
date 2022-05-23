@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProductPage from './views/products/ProductPage';
 import CheckoutPage from './views/checkout/CheckoutPage';
+import OrderConfirmation from './views/checkout/CheckoutConfirmation';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path=":productId" element={<ProductPage productId={1}/>}/>
             </Route>
             <Route path="checkout" element={<CheckoutPage/>}/>            
+            <Route path="confirmation" element={<OrderConfirmation/>}/>
           </Routes>
         </main>
       </div>      

@@ -35,7 +35,10 @@ const preloadedState = {
 				productId: 1,
 				quantity: 17
 			}
-		}
+		},
+		checkoutStatus: "idle",
+		orderId: null,
+		error: null
 	}
 }
 

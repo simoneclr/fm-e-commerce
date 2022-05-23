@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import { confirmOrder } from "../../store/cart/cartSlice";
 
 import FloatingLabelInput from "../../components/FloatingLabelInput";
 
@@ -17,6 +21,10 @@ function CheckoutForm() {
 	const [zipCode, setZipCode] = useState("")
 	const [creditCardNumber, setCreditCardNumber] = useState("")
 	const [creditCardPin, setCreditCardPin] = useState("")
+
+	const dispatch = useDispatch()
+
+	const navigate = useNavigate()
 
 	// Handle input changes
 	const onInputChanged = (e) => {
@@ -39,19 +47,19 @@ function CheckoutForm() {
 	const onFormSubmitted = (e) => {
 		e.preventDefault()
 
-		// TODO: Dispatch action to redux store
-		console.log(
-			"First Name: " + firstName + "\n" +
-			"Last Name: " + lastName + "\n" +
-			"Email Address: " + email + "\n" +
-			"Phone Number: " + phone + "\n" +
-			"Address: " + address + "\n" +
-			"City: " + city + "\n" +
-			"Country: " + country + "\n" +
-			"zipCode: " + zipCode + "\n" +
-			"creditCardNumber: " + creditCardNumber + "\n" +
-			"creditCardPin: " + creditCardPin
-		)
+		// Dispatch action to redux store
+		dispatch(confirmOrder({
+			firstName,
+			lastName,
+			email,
+			phone,
+			address,
+			city,
+			country,
+			zipCode,
+			creditCardNumber,
+			creditCardPin
+		}))
 
 		// Reset form
 		setFirstName("")
@@ -64,6 +72,9 @@ function CheckoutForm() {
 		setZipCode("")
 		setCreditCardNumber("")
 		setCreditCardPin("")
+
+		// Navigate to order confirmation page
+		navigate("../confirmation")
 	}
 
 	return (

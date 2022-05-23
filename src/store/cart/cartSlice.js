@@ -1,4 +1,32 @@
-import { createEntityAdapter, createSelector, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createEntityAdapter, createSelector, createSlice, nanoid } from "@reduxjs/toolkit";
+
+// Perform order confirmation
+export const confirmOrder = createAsyncThunk("cart/confirmOrder", async checkoutInformation => {
+
+	// Log form data
+	console.log(
+		"Order Confirmed: \n" +
+		"First Name: " + checkoutInformation.firstName + "\n" +
+		"Last Name: " + checkoutInformation.lastName + "\n" +
+		"Email Address: " + checkoutInformation.email + "\n" +
+		"Phone Number: " + checkoutInformation.phone + "\n" +
+		"Address: " + checkoutInformation.address + "\n" +
+		"City: " + checkoutInformation.city + "\n" +
+		"Country: " + checkoutInformation.country + "\n" +
+		"zipCode: " + checkoutInformation.zipCode + "\n" +
+		"creditCardNumber: " + checkoutInformation.creditCardNumber + "\n" +
+		"creditCardPin: " + checkoutInformation.creditCardPin
+	)
+
+	// Simulate delay
+	await new Promise(r => setTimeout(r, 2000))
+
+	// Simulate an error
+	// throw new Error("Server unavailable")
+
+	// Return something resembling an order id
+	return nanoid()
+})
 
 const cartAdapter = createEntityAdapter({
 	selectId: item => item.productId
@@ -44,6 +72,25 @@ const cartSlice = createSlice({
 				}
 			}
 		}
+	},
+	extraReducers: (builder) => {
+		builder
+			.addCase(confirmOrder.pending, (state, action) => {
+				state.checkoutStatus = "pending"
+			})
+			.addCase(confirmOrder.fulfilled, (state, action) => {
+				state.checkoutStatus = "success"
+				// order id returned by the server (in this case, the fake async call)
+				state.orderId = action.payload
+
+				// Clear the cart
+				state.entities = {}
+				state.ids = []
+			})
+			.addCase(confirmOrder.rejected, (state, action) => {
+				state.checkoutStatus = "failed"
+				state.error = action.error.message
+			})
 	}
 })
 
