@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fm-e-commerce/static/css/main.7c915689.css",
-    "main.js": "/fm-e-commerce/static/js/main.23732868.js",
+    "main.css": "/fm-e-commerce/static/css/main.11bd86d4.css",
+    "main.js": "/fm-e-commerce/static/js/main.8b40cbc8.js",
     "static/media/image-product-2.jpg": "/fm-e-commerce/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
     "static/media/image-product-1.jpg": "/fm-e-commerce/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
     "static/media/image-product-3.jpg": "/fm-e-commerce/static/media/image-product-3.af5c71ba9ffcc0b8b54d.jpg",
@@ -17,11 +17,11 @@
     "static/media/icon-menu.svg": "/fm-e-commerce/static/media/icon-menu.fe35728850a6c497ad8864865ae6ca13.svg",
     "static/media/icon-previous.svg": "/fm-e-commerce/static/media/icon-previous.41abd710c663aa283bd830b6922fa156.svg",
     "static/media/icon-next.svg": "/fm-e-commerce/static/media/icon-next.d5574044d38556152e7377fd7f79ecf0.svg",
-    "main.7c915689.css.map": "/fm-e-commerce/static/css/main.7c915689.css.map",
-    "main.23732868.js.map": "/fm-e-commerce/static/js/main.23732868.js.map"
+    "main.11bd86d4.css.map": "/fm-e-commerce/static/css/main.11bd86d4.css.map",
+    "main.8b40cbc8.js.map": "/fm-e-commerce/static/js/main.8b40cbc8.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c915689.css",
-    "static/js/main.23732868.js"
+    "static/css/main.11bd86d4.css",
+    "static/js/main.8b40cbc8.js"
   ]
 }
