@@ -11,7 +11,7 @@ import MobileMenuButton from "./MobileMenuButton";
 const NavListItem = ({children, to, onClick}) => {
 	return (
 		<li>
-			<a href={to ? to : "#"} onClick={onClick} className="
+			<a href={to ? to : "javascript:void(0)"} onClick={onClick} className="
 				text-veryDarkBlue font-bold lg:text-darkGrayishBlue lg:hover:text-veryDarkBlue lg:font-normal
 				lg:relative lg:h-full lg:flex lg:items-center
 				lg:after:absolute lg:after:bottom-0 lg:after:w-full lg:after:h-1 lg:after:bg-primaryOrange
