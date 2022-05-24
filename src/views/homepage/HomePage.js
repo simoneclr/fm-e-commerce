@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import FeaturedSection from "./FeaturedSection";
+
 // Displays the homepage
 function HomePage() {
 	return (
@@ -26,8 +28,26 @@ function HomePage() {
 				</Link>
 			</section>
 
+			<HomePageSection title="featured">
+				<FeaturedSection/>
+			</HomePageSection>
+
 		</div>
 	)
 }
 
 export default HomePage
+
+// Displays a section in the homepage with the given title and content
+const HomePageSection = ({title, children}) => {
+	return (
+		<section className="flex flex-col gap-16">
+			<h2 className="relative text-4xl capitalize py-8">
+				<span className="absolute block left-0 top-5 bg-primaryOrange w-16 h-2 rounded-full" aria-hidden="true"></span>
+				{title}
+			</h2>
+
+			{children}
+		</section>
+	)
+}
