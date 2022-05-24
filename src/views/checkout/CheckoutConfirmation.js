@@ -32,7 +32,7 @@ function OrderConfirmation() {
 export default OrderConfirmation
 
 const OrderIdle = () => {
-	return <Navigate to="/" replace/>
+	return <Navigate to="/" replace={true}/>
 }
 
 const OrderPending = () => {
