@@ -77,7 +77,7 @@ const OrderFullfilled = ({orderId}) => {
 
 			<CtaButton className="mt-8 w-32" onClick={() => {
 						dispatch(orderAcknowledged())
-						navigate("/")
+						navigate("/", {replace: true})
 					}}>
 				Got It
 			</CtaButton>
@@ -99,7 +99,7 @@ const OrderFailed = () => {
 				An error occurred while confirming your order. Please try again later.
 			</p>
 
-			<Link to="/" onClick={() => {dispatch(orderAcknowledged())}}
+			<Link to="/" onClick={() => {dispatch(orderAcknowledged())}} replace={true}
 						className="text-primaryOrange text-lg block mt-8 hover:underline">
 				Return to Homepage
 			</Link>
