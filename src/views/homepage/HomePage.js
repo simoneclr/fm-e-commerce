@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import FeaturedSection from "./FeaturedSection";
+import CollectionsSection from "./CollectionsSection";
 
 // Displays the homepage
 function HomePage() {
@@ -30,6 +31,10 @@ function HomePage() {
 
 			<HomePageSection title="featured">
 				<FeaturedSection/>
+			</HomePageSection>
+
+			<HomePageSection title={"collections"}>
+				<CollectionsSection/>
 			</HomePageSection>
 
 		</div>
