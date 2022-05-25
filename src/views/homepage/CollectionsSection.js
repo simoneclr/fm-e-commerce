@@ -1,11 +1,16 @@
 import React from "react";
 
+import GenderedCollections from "./GenderedCollections";
 import SeasonalCollections from "./SeasonalCollections";
 
 // Displays a list of available product collections
 function CollectionsSection() {
 	return (
-		<SeasonalCollections/>
+		<React.Fragment>
+			<GenderedCollections/>
+			
+			<SeasonalCollections/>
+		</React.Fragment>
 	)
 }
 
