@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fm-e-commerce/static/css/main.5b4b982a.css",
-    "main.js": "/fm-e-commerce/static/js/main.7fcf8b9e.js",
+    "main.css": "/fm-e-commerce/static/css/main.76f7871a.css",
+    "main.js": "/fm-e-commerce/static/js/main.c86929e6.js",
     "static/media/mike-von-rj8ohjW9RBA-unsplash.jpg": "/fm-e-commerce/static/media/mike-von-rj8ohjW9RBA-unsplash.8ebd5ce1daa686544116.jpg",
     "static/media/bluewater-sweden--hETibwa_UU-unsplash.jpg": "/fm-e-commerce/static/media/bluewater-sweden--hETibwa_UU-unsplash.31bba1ed4db86f0c80f8.jpg",
     "static/media/image-product-2.jpg": "/fm-e-commerce/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
@@ -23,11 +23,11 @@
     "static/media/icon-menu.svg": "/fm-e-commerce/static/media/icon-menu.fe35728850a6c497ad8864865ae6ca13.svg",
     "static/media/icon-previous.svg": "/fm-e-commerce/static/media/icon-previous.41abd710c663aa283bd830b6922fa156.svg",
     "static/media/icon-next.svg": "/fm-e-commerce/static/media/icon-next.d5574044d38556152e7377fd7f79ecf0.svg",
-    "main.5b4b982a.css.map": "/fm-e-commerce/static/css/main.5b4b982a.css.map",
-    "main.7fcf8b9e.js.map": "/fm-e-commerce/static/js/main.7fcf8b9e.js.map"
+    "main.76f7871a.css.map": "/fm-e-commerce/static/css/main.76f7871a.css.map",
+    "main.c86929e6.js.map": "/fm-e-commerce/static/js/main.c86929e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b4b982a.css",
-    "static/js/main.7fcf8b9e.js"
+    "static/css/main.76f7871a.css",
+    "static/js/main.c86929e6.js"
   ]
 }
