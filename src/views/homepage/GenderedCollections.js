@@ -3,19 +3,19 @@ import React from "react";
 import pictureMan from "../../assets/images/bluewater-sweden--hETibwa_UU-unsplash.jpg"
 import pictureWoman from "../../assets/images/mike-von-rj8ohjW9RBA-unsplash.jpg"
 
-import GenderLinkCard from "./GenderLinkCard";
+import ImageLinkCard from "./ImageLinkCard";
 
 // Displays cards for the available gendered collections
 function GenderedCollections() {
 	return (
 		<div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-			<GenderLinkCard to="/" name={"men"}>
+			<ImageLinkCard to="/" name={"men"} srMessage="Explore Men's collection">
 				<img src={pictureMan} alt="A man wearing sneakers"/>
-			</GenderLinkCard>
+			</ImageLinkCard>
 
-			<GenderLinkCard to="/" name={"women"}>
+			<ImageLinkCard to="/" name={"women"} srMessage="Explore Women's collection">
 				<img src={pictureWoman} alt="A woman wearing sneakers"/>
-			</GenderLinkCard>
+			</ImageLinkCard>
 		</div>
 	)
 }
