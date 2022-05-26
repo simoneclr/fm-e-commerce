@@ -34,27 +34,34 @@ const getProductGender = (id) => {
 
 // Given a fake product's id, decides which collection to put it in
 const getProductCollection = (id) => {
-	if (id % 4 === 0) {
-		return "winter"
-	} else if (id % 3 === 0) {
-		return "autumn"
-	} else if (id % 2 === 0) {
-		return "summer"
-	} else {
-		return "spring"
+	switch (id % 4) {
+		case 0: return "winter";
+		case 1: return "spring";
+		case 2: return "summer";
+		case 3: return "fall";
+		default: return "fall";
+	}
+}
+
+// Given a fake product's id, generates a name for it
+const getProductName = (id) => {
+	switch (id % 4) {
+		case 0: return "Winter Limited Edition Sneakers";
+		case 1: return "Spring Limited Edition Sneakers";
+		case 2: return "Summer Limited Edition Sneakers";
+		case 3: return "Fall Limited Edition Sneakers";
+		default: return "Fall Limited Edition Sneakers";
 	}
 }
 
 // Given a fake product's id, builds and return an array of images for that product
 const getProductImagesArray = (id) => {
-	if (id % 4 === 0) {
-		return [productImage4, productImage1, productImage2, productImage3]
-	} else if (id % 3 === 0) {
-		return [productImage3, productImage1, productImage2, productImage4]
-	} else if (id % 2 === 0) {
-		return [productImage2, productImage1, productImage3, productImage4]
-	} else {
-		return [productImage1, productImage2, productImage3, productImage4]
+	switch (id % 4) {
+		case 0: return [productImage4, productImage1, productImage2, productImage3];
+		case 1: return [productImage1, productImage2, productImage3, productImage4];
+		case 2: return [productImage2, productImage1, productImage3, productImage4];
+		case 3: return [productImage3, productImage1, productImage2, productImage4];
+		default: return [productImage3, productImage1, productImage2, productImage4];
 	}
 }
 
@@ -72,7 +79,7 @@ const getFakeProductsData = (n) => {
 		fakeProducts.entities[i] = {
 			id: i,
 			brand: "Sneaker Company",
-			name: "Fall Limited Edition Sneakers",
+			name: getProductName(i),
 			description: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
 			gender: getProductGender(i),
 			collection: getProductCollection(i),
