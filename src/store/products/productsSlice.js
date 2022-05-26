@@ -10,6 +10,7 @@ const productsSlice = createSlice({
 export default productsSlice.reducer
 
 export const {
+	selectIds: selectAllProductIds,
 	selectAll: selectAllProducts,
 	selectById: selectProductById
 } = productsAdapter.getSelectors(state => state.products)

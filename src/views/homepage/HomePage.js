@@ -21,7 +21,7 @@ function HomePage() {
 					</span>
 				</h1>
 
-				<Link to="products/details/1"
+				<Link to="products/"
 							className="block bg-primaryOrange text-white text-center font-bold 
 												w-48 mx-auto lg:mx-0 mt-16 p-4 rounded-lg
 												hover:opacity-75 disabled:opacity-40">

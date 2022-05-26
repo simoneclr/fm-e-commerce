@@ -7,6 +7,7 @@ import HomePage from './views/homepage/HomePage';
 import ProductPage from './views/products/ProductPage';
 import CheckoutPage from './views/checkout/CheckoutPage';
 import OrderConfirmation from './views/checkout/CheckoutConfirmation';
+import ProductsDashboard from './views/products/ProductsDashboard';
 
 function App() {
   return (
@@ -17,10 +18,14 @@ function App() {
         <main className="pb-8 md:pt-4 md:pb-16 lg:py-20 lg:px-[10%]">
           <Routes>
             <Route path="/" element={<HomePage/>} />
+            
             <Route path='products'>
+              <Route path="" element={<ProductsDashboard/>}/>
               <Route path="details/:productId" element={<ProductPage/>}/>
             </Route>
+            
             <Route path="checkout" element={<CheckoutPage/>}/>            
+            
             <Route path="confirmation" element={<OrderConfirmation/>}/>
           </Routes>
         </main>
