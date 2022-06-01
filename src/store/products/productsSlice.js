@@ -1,4 +1,4 @@
-import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
+import { createEntityAdapter, createSelector, createSlice } from "@reduxjs/toolkit";
 
 const productsAdapter = createEntityAdapter()
 
@@ -22,3 +22,13 @@ export const selectFeaturedProducts = state => [
 	state.products.entities[state.products.ids[2]],
 	state.products.entities[state.products.ids[3]]
 ]
+
+// Select ids of products that fit the given filters
+// Use createSelector to create memoized selector instead of repeating the filter() call in the component 
+export const selectFilteredProductsIds = createSelector(
+	[selectAllProducts, (state, filters) => filters],
+	(items, filters) => items.filter(item => 
+		filters.gender[item.gender] && filters.collection[item.collection]
+	).map(item => item.id)
+)
+	

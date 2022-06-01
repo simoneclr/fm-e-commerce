@@ -1,15 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { selectAllProductIds } from "../../store/products/productsSlice";
+import { selectFilteredProductsIds } from "../../store/products/productsSlice";
 
 import ProductLinkCard from "./ProductLinkCard";
 
 // Displays a list of available products
-function ProductsList() {
+function FilteredProductsList({filters}) {
 
 	// Select product ids
-	const productIds = useSelector(selectAllProductIds)
+	const productIds = useSelector(state => selectFilteredProductsIds(state, filters))
 
 	return (
 		<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-4">
@@ -21,4 +21,4 @@ function ProductsList() {
 
 }
 
-export default ProductsList
+export default FilteredProductsList
