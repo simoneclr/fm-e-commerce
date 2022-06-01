@@ -1,18 +1,34 @@
-import React, { useState } from "react";
-import ProductsFilters from "./ProductsFilters";
+import React, { useEffect, useState } from "react";
 
+import { useSearchParams } from "react-router-dom";
+
+import ProductsFilters from "./ProductsFilters";
 import FilteredProductsList from "./FilteredProductsList";
 
 // Displays a page showing all available products
 function ProductsDashboard() {
 
+	// Get query parameters from url
+	const [searchParams] = useSearchParams()
+
 	// State variables controlling product filters
-	const [showMen, setShowMen] = useState(true)
-	const [showWomen, setShowWomen] = useState(true)
-	const [showSpring, setShowSpring] = useState(true)
-	const [showSummer, setShowSummer] = useState(true)
-	const [showFall, setShowFall] = useState(true)
-	const [showWinter, setShowWinter] = useState(true)
+	const [showMen, setShowMen] = useState(false)
+	const [showWomen, setShowWomen] = useState(false)
+	const [showSpring, setShowSpring] = useState(false)
+	const [showSummer, setShowSummer] = useState(false)
+	const [showFall, setShowFall] = useState(false)
+	const [showWinter, setShowWinter] = useState(false)
+
+	useEffect(() => {
+
+		setShowMen(searchParams.get("showMen") === "true")
+		setShowWomen(searchParams.get("showWomen") === "true")
+		setShowSpring(searchParams.get("showSpring") === "true")
+		setShowSummer(searchParams.get("showSummer") === "true")
+		setShowFall(searchParams.get("showFall") === "true")
+		setShowWinter(searchParams.get("showWinter") === "true")
+
+	}, [searchParams])
 
 	/*
 		Given a product p, display it if

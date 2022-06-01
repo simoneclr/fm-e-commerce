@@ -76,9 +76,18 @@ function Navbar() {
 
 				<ul className="h-full pt-8 flex flex-col items-start gap-8
 											lg:w-auto lg:p-0 lg:flex-row lg:items-stretch">
-					<NavListItem onClick={closeNavMenu}>Collections</NavListItem>
-					<NavListItem onClick={closeNavMenu}>Men</NavListItem>
-					<NavListItem onClick={closeNavMenu}>Women</NavListItem>
+					<NavListItem to="/fm-e-commerce#/products/" onClick={closeNavMenu}>
+						Collections
+					</NavListItem>
+					
+					<NavListItem to="/fm-e-commerce#/products/?showMen=true" onClick={closeNavMenu}>
+						Men
+					</NavListItem>
+					
+					<NavListItem to="/fm-e-commerce#/products/?showWomen=true" onClick={closeNavMenu}>
+						Women
+					</NavListItem>
+					
 					<NavListItem onClick={closeNavMenu}>About</NavListItem>
 					<NavListItem onClick={closeNavMenu}>Contact</NavListItem>
 				</ul>

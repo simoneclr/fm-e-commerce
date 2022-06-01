@@ -12,19 +12,19 @@ function SeasonalCollections() {
 	return (
 		<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 
-			<IconLinkCard to="/" name="spring" srMessage="Check out our spring collection">
+			<IconLinkCard to="/products/?showSpring=true" name="spring" srMessage="Check out our spring collection">
 				<IconSpring className="h-16 sm:h-24 xl:h-32 mx-auto fill-current stroke-current"/>
 			</IconLinkCard>
 			
-			<IconLinkCard to="/" name="summer" srMessage="Check out our summer collection">
+			<IconLinkCard to="/products/?showSummer=true" name="summer" srMessage="Check out our summer collection">
 				<IconSummer className="h-16 sm:h-24 xl:h-32 mx-auto fill-current stroke-current"/>
 			</IconLinkCard>
 			
-			<IconLinkCard to="/" name="fall" srMessage="Check out our fall collection">
+			<IconLinkCard to="/products/?showFall=true" name="fall" srMessage="Check out our fall collection">
 				<IconAutumn className="h-16 sm:h-24 xl:h-32 mx-auto fill-current stroke-current"/>
 			</IconLinkCard>
 			
-			<IconLinkCard to="/" name="winter" srMessage="Check out our winter collection">
+			<IconLinkCard to="/products/?showWinter=true" name="winter" srMessage="Check out our winter collection">
 				<IconWinter className="h-16 sm:h-24 xl:h-32 mx-auto fill-current stroke-current"/>
 			</IconLinkCard>
 		</div>
