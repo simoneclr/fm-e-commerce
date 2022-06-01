@@ -27,8 +27,22 @@ export const selectFeaturedProducts = state => [
 // Use createSelector to create memoized selector instead of repeating the filter() call in the component 
 export const selectFilteredProductsIds = createSelector(
 	[selectAllProducts, (state, filters) => filters],
-	(items, filters) => items.filter(item => 
-		filters.gender[item.gender] && filters.collection[item.collection]
-	).map(item => item.id)
+	(items, filters) => {
+
+		let filteredItems = items.slice()
+
+		// Only filter by gender if at least one gender was explicitly selected
+		if (filters.gender.M || filters.gender.F) {
+			filteredItems = filteredItems.filter(item => filters.gender[item.gender])
+		}
+
+		// Only filter by collection if at least one colelction was explicitly selected
+		if (filters.collection.spring || filters.collection.summer || filters.collection.fall || filters.collection.winter) {
+			filteredItems = filteredItems.filter(item => filters.collection[item.collection])
+		}
+
+		// Return the ids
+		return filteredItems.map(item => item.id)
+	}
 )
 	
