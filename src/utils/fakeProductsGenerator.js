@@ -25,7 +25,7 @@ import productImage4 from "../assets/images/image-product-4.jpg"
 
 // Given a fake product's id, decides which gender to assign to it
 const getProductGender = (id) => {
-	if (id % 2 === 0) {
+	if (id % 8 <= 3) {
 		return "M"
 	} else {
 		return "F"
