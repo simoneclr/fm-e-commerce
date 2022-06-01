@@ -34,7 +34,7 @@ function ProductsDashboard() {
 	}
 
 	return (
-		<div className="px-[5%] lg:px-0 pt-4 lg:pt-0">
+		<div className="px-[5%] sm:px-[10%] lg:px-0 pt-4 lg:pt-0">
 			<ProductsFilters 
 				showMen={showMen} setShowMen={setShowMen}
 				showWomen={showWomen} setShowWomen={setShowWomen}
