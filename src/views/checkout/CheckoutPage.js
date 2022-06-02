@@ -26,7 +26,7 @@ function CheckoutPage() {
 		cartIds.length > 0 ?
 
 		<div className="flex flex-col gap-8 px-[5%] sm:px-[10%] 
-										lg:px-0 lg:flex-row lg:items-start lg:justify-between">
+										lg:pt-8 lg:px-0 lg:flex-row lg:items-start lg:justify-between">
 			<div className="py-4 lg:px-4 lg:grow lg:rounded-xl lg:shadow-xl">
 
 				<h2 className="font-bold text-2xl pb-2 mb-8 border-b-2">

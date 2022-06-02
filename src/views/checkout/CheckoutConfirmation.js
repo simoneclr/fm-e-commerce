@@ -23,7 +23,7 @@ function OrderConfirmation() {
 	}
 
 	return (
-		<div className="text-center py-8 lg:py-0">
+		<div className="text-center py-8 md:py-16">
 			{renderedComponent}
 		</div>
 	)

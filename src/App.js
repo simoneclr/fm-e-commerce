@@ -15,7 +15,7 @@ function App() {
       <div className='grow w-full max-w-[1440px] mx-auto'>
         <Navbar/>
       
-        <main className="pb-8 md:pt-4 md:pb-16 lg:py-20 lg:px-[10%]">
+        <main className="pb-8 md:pb-16 lg:pb-20 lg:mx-[10%]">
           <Routes>
             <Route path="/" element={<HomePage/>} />
             
