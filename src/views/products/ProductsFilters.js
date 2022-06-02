@@ -15,7 +15,7 @@ function ProductsFilters(props) {
 	} = props
 
 	return (
-		<div className="flex flex-col lg:flex-row gap-8 lg:gap-16 pb-8 lg:pt-8">
+		<div className="flex flex-col lg:flex-row gap-8 lg:gap-16 pb-8 lg:py-16">
 
 			<div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-[repeat(2,auto)] gap-x-8 gap-y-4">
 				<p className="col-span-2 sm:col-span-4 lg:col-span-4 text-xl font-bold">

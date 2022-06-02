@@ -12,7 +12,7 @@ function FilteredProductsList({filters}) {
 	const productIds = useSelector(state => selectFilteredProductsIds(state, filters))
 
 	return (
-		<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-4">
+		<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
 			{ productIds.map(productId => 
 					<ProductLinkCard key={productId} productId={productId}/>
 			)}
