@@ -1,15 +1,17 @@
 import React from "react";
 
 // Given the initial price and a discount factor, computes and displays the actual price of the product
-const ProductPrice = ({initialPrice, discountFactor}) => {
+const ProductPrice = ({initialPrice, discountFactor, className}) => {
 
 	const finalPrice = (initialPrice - initialPrice * discountFactor).toFixed(2)
 
 	const isDiscounted = discountFactor > 0
 
+	const classProp = className ? className + " " : ""
+
 	return (
-		<div className="flex items-center gap-2 xl:flex-col xl:items-start">
-			<div className="flex items-center gap-2 grow sm:grow-0">
+		<div className={classProp + "flex gap-2"}>
+			<div className="flex items-center gap-2">
 				<span className="text-2xl font-bold">
 					<span className="sr-only">Price:</span>
 					${finalPrice}

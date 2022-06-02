@@ -38,7 +38,8 @@ function ProductPage() {
 					{product.description}
 				</p>
 				
-				<ProductPrice initialPrice={product.price} discountFactor={product.discount}/>
+				<ProductPrice initialPrice={product.price} discountFactor={product.discount}
+					className="items-center justify-between sm:justify-start xl:flex-col xl:items-start"/>
 
 				<ProductControls productId={productId}/>
 
