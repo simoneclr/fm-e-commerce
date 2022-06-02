@@ -10,9 +10,9 @@ function HomePage() {
 		<div className="flex flex-col gap-8 items-stretch px-[5%] md:px-[10%] lg:px-0">
 
 			{/* Hero Section */}
-			<section className="py-16 lg:pb-32">
+			<section className="py-16 lg:pb-24">
 				<h1 className="text-center text-4xl lg:text-left lg:text-6xl">
-					<span className="block leading-tight lg:leading-none text-7xl lg:text-8xl mb-16">
+					<span className="block leading-tight lg:leading-none text-7xl lg:text-8xl mb-16 lg:mb-24">
 						Quality <span className="text-primaryOrange font-bold">Sneakers </span>
 					</span>
 
@@ -22,8 +22,8 @@ function HomePage() {
 				</h1>
 
 				<Link to="products/"
-							className="block bg-primaryOrange text-white text-center font-bold 
-												w-48 mx-auto lg:mx-0 mt-16 p-4 rounded-lg
+							className="block bg-primaryOrange text-white text-xl text-center font-bold 
+												w-48 mx-auto lg:mx-0 mt-16 lg:mt-24 p-4 rounded-lg
 												hover:opacity-75 disabled:opacity-40">
 					Shop Now
 				</Link>
