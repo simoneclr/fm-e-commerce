@@ -9,11 +9,11 @@ import ImageLinkCard from "./ImageLinkCard";
 function GenderedCollections() {
 	return (
 		<div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-			<ImageLinkCard to="/" name={"men"} srMessage="Explore Men's collection">
+			<ImageLinkCard to="/products/?showMen=true" name={"men"} srMessage="Explore Men's collection">
 				<img src={pictureMan} alt="A man wearing sneakers"/>
 			</ImageLinkCard>
 
-			<ImageLinkCard to="/" name={"women"} srMessage="Explore Women's collection">
+			<ImageLinkCard to="/products/?showWomen=true" name={"women"} srMessage="Explore Women's collection">
 				<img src={pictureWoman} alt="A woman wearing sneakers"/>
 			</ImageLinkCard>
 		</div>
